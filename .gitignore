@@ -46,3 +46,7 @@ next-env.d.ts
 
 # 개인 자료 폴더
 내폴더/
+
+# SSH 키 및 보안 파일 (절대 커밋 금지)
+*ssh key*
+*ssh_key*
