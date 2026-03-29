@@ -34,7 +34,7 @@
 |------|-----------|--------------|
 | 아키텍처 | 프론트엔드만 (Next.js) | 풀스택 (Next.js + Express + SQLite) |
 | 데이터 저장 | localStorage (각자 폰에만) | 서버 DB (4인 공유·동기화) |
-| 인증 | 없음 | 4자리 PIN + 멤버 선택 (JWT) |
+| 인증 | 없음 | 6자리 PIN + 멤버 선택 (JWT) |
 | 경비 공유 | ❌ 내 폰에만 저장 | ✅ 가족 전원 실시간 공유 |
 | 일정 수정 | ❌ 수정자 폰에만 반영 | ✅ 서버 저장 → 전원 반영 |
 | 개발 복잡도 | 낮음 (4~5시간) | 중간 (주간 단위 단계별 진행) |
@@ -136,8 +136,8 @@ DB_PATH=/app/data/travel.db
 # JWT 시크릿 — 32자 이상 랜덤 문자열
 JWT_SECRET=여기에_랜덤_문자열_입력_32자이상
 
-# 가족 공통 PIN (4자리 숫자)
-FAMILY_PIN=1234
+# 가족 공통 PIN (6자리 숫자)
+FAMILY_PIN=115511
 
 # CORS 허용
 CORS_ORIGIN=https://swiss-italy-travel.vercel.app
@@ -206,7 +206,7 @@ docs/product-specs/auth.md 와 docs/design-docs/adr-auth-pin.md 를 읽고,
 - backend/src/middleware/authenticate.ts
 
 [POST /api/auth/login 동작]
-1. body에서 pin(4자리 숫자), memberId(string) 수신
+1. body에서 pin(6자리 숫자), memberId(string) 수신
 2. FAMILY_PIN과 bcrypt.compare로 PIN 검증
 3. members 테이블에서 해당 memberId 조회
 4. JWT 발급 (payload: { memberId, memberName, role }, 만료: 30일)
@@ -240,9 +240,9 @@ docs/product-specs/auth.md 의 화면 구성을 참고해서
 - src/hooks/useAuth.ts
 
 [PIN 입력 화면]
-- 4자리 숫자 키패드 (0~9 + 백스페이스)
+- 6자리 숫자 키패드 (0~9 + 백스페이스)
 - 입력 중: ● 으로 마스킹
-- 4자리 입력 즉시 POST /api/auth/login 호출
+- 6자리 입력 즉시 POST /api/auth/login 호출
 - 실패 시: "PIN이 올바르지 않습니다" 빨간 메시지
 - 5회 실패 시: "5분 후 다시 시도하세요" + 타이머
 

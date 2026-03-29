@@ -29,7 +29,7 @@
 | 지도 | Leaflet + OpenStreetMap |
 | PWA | next-pwa (Workbox) |
 | 백엔드 | Node.js 20 · Express · SQLite (better-sqlite3) |
-| 인증 | JWT (httpOnly cookie) · 가족 공통 PIN 4자리 |
+| 인증 | JWT (httpOnly cookie) · 가족 공통 PIN 6자리 |
 | 인프라 | Vercel (프론트) · Oracle Cloud VM (백엔드, IP는 GitHub Secret 관리) |
 | 리버스 프록시 | Caddy (Docker) · Let's Encrypt 자동 HTTPS |
 | 자동화 | n8n (환율 갱신, 날씨 알림, 경비 리포트) |

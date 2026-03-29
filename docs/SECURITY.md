@@ -14,7 +14,7 @@
 
 | 항목 | 구현 |
 |------|------|
-| 인증 방식 | 4자리 PIN → JWT (httpOnly, Secure, SameSite=Strict) |
+| 인증 방식 | 6자리 PIN → JWT (httpOnly, Secure, SameSite=Strict) |
 | 토큰 만료 | 30일 (access), refresh 없음 (단순화) |
 | Rate limit | PIN 5회 실패 → 5분 잠금 (IP 기반) |
 | 권한 | admin(진형): 일정 수정/삭제, member: 열람 + 경비 입력 |

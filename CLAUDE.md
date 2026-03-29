@@ -46,7 +46,7 @@ Next.js(Vercel) + Express + SQLite(Oracle VM) 풀스택 구조.
 - 상태관리: Zustand(클라이언트) + TanStack Query(서버)
 - 지도: Leaflet + OpenStreetMap
 - 백엔드: Node.js 20, Express, SQLite(better-sqlite3), JWT
-- 인증: 가족 공통 PIN 4자리 + 멤버 선택, JWT 30일, httpOnly cookie
+- 인증: 가족 공통 PIN 6자리 + 멤버 선택, JWT 30일, httpOnly cookie
 - 실시간: HTTP 폴링 10초 간격 (Socket.io 사용 금지)
 - 배포: Vercel(프론트) + Oracle VM(백엔드, PM2)
 

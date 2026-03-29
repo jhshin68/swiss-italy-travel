@@ -46,7 +46,7 @@
 | 번호 | 문서 | 결정 사항 | 상태 |
 |------|------|-----------|------|
 | DD-001 | [core-beliefs.md](./core-beliefs.md) | 프로젝트 핵심 신념·불변 원칙 | ✅ 확정 |
-| DD-002 | [adr-auth-pin.md](./adr-auth-pin.md) | 인증 방식: 4자리 PIN | ✅ 확정 |
+| DD-002 | [adr-auth-pin.md](./adr-auth-pin.md) | 인증 방식: 6자리 PIN | ✅ 확정 |
 | DD-003 | [adr-offline-strategy.md](./adr-offline-strategy.md) | 오프라인 퍼스트 전략 | ✅ 확정 |
 | DD-004 | [adr-db-oracle-vm.md](./adr-db-oracle-vm.md) | DB를 Oracle VM에 직접 운영 | ✅ 확정 |
 | DD-005 | [adr-map-leaflet.md](./adr-map-leaflet.md) | 지도: Leaflet + OpenStreetMap | ✅ 확정 |
