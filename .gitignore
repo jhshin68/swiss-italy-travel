@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# bkit runtime (개인 세션 상태 — 커밋 불필요)
+.bkit/runtime/
+
+# 개인 자료 폴더
+내폴더/
