@@ -1,4 +1,14 @@
-import type { ApiResponse, LoginData, Member, DayPlan, Spot } from '@/types';
+import type {
+  ApiResponse,
+  LoginData,
+  Member,
+  DayPlan,
+  Spot,
+  Expense,
+  CreateExpenseRequest,
+  ExpenseSummary,
+  Settlement,
+} from '@/types';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'https://slp-travel.duckdns.org';
 
@@ -71,4 +81,50 @@ export async function getSpots(
 ): Promise<ApiResponse<Spot[]>> {
   const query = day !== undefined ? `?day=${day}` : '';
   return fetchApi<Spot[]>(`/api/trips/${tripId}/spots${query}`);
+}
+
+// ── 경비 API ──────────────────────────────────────
+
+// 경비 목록 조회 (date 필터 가능)
+export async function getExpenses(
+  tripId: string,
+  date?: string,
+): Promise<ApiResponse<Expense[]>> {
+  const query = date ? `?date=${date}` : '';
+  return fetchApi<Expense[]>(`/api/trips/${tripId}/expenses${query}`);
+}
+
+// 경비 생성
+export async function createExpense(
+  tripId: string,
+  data: CreateExpenseRequest,
+): Promise<ApiResponse<Expense>> {
+  return fetchApi<Expense>(`/api/trips/${tripId}/expenses`, {
+    method: 'POST',
+    body: JSON.stringify(data),
+  });
+}
+
+// 경비 삭제
+export async function deleteExpense(
+  tripId: string,
+  expenseId: number,
+): Promise<ApiResponse<null>> {
+  return fetchApi<null>(`/api/trips/${tripId}/expenses/${expenseId}`, {
+    method: 'DELETE',
+  });
+}
+
+// 경비 요약 (카테고리별·결제자별)
+export async function getExpenseSummary(
+  tripId: string,
+): Promise<ApiResponse<ExpenseSummary>> {
+  return fetchApi<ExpenseSummary>(`/api/trips/${tripId}/expenses/summary`);
+}
+
+// 정산 결과 조회
+export async function getSettlement(
+  tripId: string,
+): Promise<ApiResponse<Settlement>> {
+  return fetchApi<Settlement>(`/api/trips/${tripId}/expenses/settlement`);
 }
