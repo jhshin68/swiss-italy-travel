@@ -7,17 +7,22 @@ interface NavItem {
   href: string;
   label: string;
   icon: string;
+  /** true면 빨간색 강조 (긴급 탭용) */
+  accent?: boolean;
 }
 
+// 스크린샷 기준 7개 탭
 const NAV_ITEMS: NavItem[] = [
   { href: '/', label: '홈', icon: '🏠' },
-  { href: '/itinerary', label: '일정', icon: '📅' },
-  { href: '/map', label: '지도', icon: '🗺️' },
-  { href: '/expenses', label: '경비', icon: '💰' },
-  { href: '/info', label: '비상', icon: 'ℹ️' },
+  { href: '/itinerary', label: '여정', icon: '🗺️' },
+  { href: '/expenses', label: '지출', icon: '💰' },
+  { href: '/missions', label: '미션', icon: '🏆' },
+  { href: '/phrasebook', label: '현지어', icon: '💬' },
+  { href: '/checklist', label: '체크', icon: '✅' },
+  { href: '/info', label: '긴급', icon: '🆘', accent: true },
 ];
 
-// 하단 탭 네비게이션 — 5개 메인 섹션으로 이동
+// 하단 탭 네비게이션 — 7개 섹션 이동
 export function BottomNav() {
   const pathname = usePathname();
 
@@ -28,7 +33,6 @@ export function BottomNav() {
     >
       <ul className="flex items-center justify-around">
         {NAV_ITEMS.map((item) => {
-          // 홈은 정확히 '/'일 때만 활성, 나머지는 prefix 매칭
           const isActive =
             item.href === '/'
               ? pathname === '/'
@@ -38,14 +42,18 @@ export function BottomNav() {
             <li key={item.href} className="flex-1">
               <Link
                 href={item.href}
-                className={`flex min-h-[48px] flex-col items-center justify-center gap-0.5 text-xs transition-colors ${
-                  isActive
-                    ? 'font-semibold text-[var(--color-primary)]'
-                    : 'text-[var(--color-text)]/50 hover:text-[var(--color-text)]/80'
+                className={`flex min-h-[48px] flex-col items-center justify-center gap-0.5 transition-colors ${
+                  item.accent
+                    ? isActive
+                      ? 'text-red-500'
+                      : 'text-red-400 hover:text-red-500'
+                    : isActive
+                      ? 'font-semibold text-[var(--color-primary)]'
+                      : 'text-[var(--color-text)]/50 hover:text-[var(--color-text)]/80'
                 }`}
               >
-                <span className="text-lg leading-none">{item.icon}</span>
-                <span>{item.label}</span>
+                <span className="text-base leading-none">{item.icon}</span>
+                <span className="text-[9px]">{item.label}</span>
               </Link>
             </li>
           );
