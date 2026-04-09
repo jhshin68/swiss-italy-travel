@@ -1,4 +1,5 @@
 # swiss-italy-travel
+<!-- updated by jhshin68 -->
 
 > 2026년 10월 스위스·이탈리아 가족 여행을 위한 올인원 PWA 앱
 
