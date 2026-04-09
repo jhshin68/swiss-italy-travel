@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // next-pwa가 자동으로 Service Worker를 생성
+  // Turbopack dev 모드에서 webpack 설정 경고 억제
+  // (next-pwa는 dev 시 disable되므로 Turbopack과 무관)
+  turbopack: {},
 };
 
 // next-pwa는 CJS 모듈이므로 require 사용
