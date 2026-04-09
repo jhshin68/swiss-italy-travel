@@ -5,6 +5,8 @@ import { Router } from 'express';
 import healthRouter from './health';
 import authRouter from './auth';
 import tripsRouter from './trips';
+import expensesRouter from './expenses';
+import expensesStatsRouter from './expenses-stats';
 
 const router = Router();
 
@@ -16,5 +18,11 @@ router.use('/auth', authRouter);
 
 // 일정·장소 조회 API
 router.use('/trips', tripsRouter);
+
+// 경비 CRUD API (GET list, POST create, DELETE)
+router.use('/trips', expensesRouter);
+
+// 경비 통계 + 정산 API (summary, settle)
+router.use('/trips', expensesStatsRouter);
 
 export default router;

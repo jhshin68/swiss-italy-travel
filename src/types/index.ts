@@ -52,6 +52,59 @@ export interface DayPlan {
   spotCount: number;
 }
 
+// ── 경비 관련 타입 ──────────────────────────────────
+
+// 지원 통화
+export type Currency = 'CHF' | 'EUR' | 'KRW';
+
+// 경비 카테고리
+export type ExpenseCategory =
+  | 'meal'
+  | 'transport'
+  | 'activity'
+  | 'shopping'
+  | 'accommodation'
+  | 'etc';
+
+// 서버에서 반환하는 경비 항목
+export interface Expense {
+  id: number;
+  amount: number;
+  currency: Currency;
+  amountKrw: number;
+  category: ExpenseCategory;
+  description: string;
+  paidByName: string;
+  paidByEmoji: string;
+  date: string;
+  time: string;
+}
+
+// 경비 생성 요청
+export interface CreateExpenseRequest {
+  amount: number;
+  currency: Currency;
+  category: ExpenseCategory;
+  description: string;
+  paidBy: string; // memberId
+  date: string;
+  time: string;
+}
+
+// 카테고리별·결제자별 요약
+export interface ExpenseSummary {
+  totalKrw: number;
+  byCategory: Record<string, number>;
+  byPayer: Array<{ name: string; emoji: string; totalKrw: number }>;
+}
+
+// 정산 결과
+export interface Settlement {
+  perPerson: number;
+  transfers: Array<{ from: string; to: string; amount: number }>;
+  balances: Record<string, number>;
+}
+
 // 장소 카드 — 각 일정의 세부 장소 정보
 export type SpotCategory = 'transport' | 'sightseeing' | 'meal' | 'hotel' | 'activity';
 
