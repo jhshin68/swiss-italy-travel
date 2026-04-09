@@ -119,7 +119,8 @@ export function SpotCard({ spot }: SpotCardProps) {
             )}
             {spot.navUrl && (
               <a
-                href={spot.navUrl}
+                // maps.google.com/dir/ → www.google.com/maps/dir/ (404 수정)
+                href={spot.navUrl.replace('https://maps.google.com/', 'https://www.google.com/maps/')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex min-h-[32px] items-center rounded-lg bg-[var(--color-secondary)]/10 px-3 text-xs font-medium text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-secondary)]/20"

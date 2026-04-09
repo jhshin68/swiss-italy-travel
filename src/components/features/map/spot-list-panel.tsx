@@ -111,7 +111,8 @@ export function SpotListPanel({ items, city, theme }: SpotListPanelProps) {
                 )}
                 {item.navUrl && (
                   <a
-                    href={item.navUrl}
+                    // maps.google.com/dir/ → www.google.com/maps/dir/ (404 수정)
+                    href={item.navUrl.replace('https://maps.google.com/', 'https://www.google.com/maps/')}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex min-h-[28px] items-center rounded-lg bg-[var(--color-secondary)]/10 px-2.5 text-[11px] font-medium text-[var(--color-secondary)] transition-colors hover:bg-[var(--color-secondary)]/20"
