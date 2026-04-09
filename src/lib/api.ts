@@ -8,6 +8,7 @@ import type {
   CreateExpenseRequest,
   ExpenseSummary,
   Settlement,
+  LocationData,
 } from '@/types';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'https://slp-travel.duckdns.org';
@@ -127,4 +128,24 @@ export async function getSettlement(
   tripId: string,
 ): Promise<ApiResponse<Settlement>> {
   return fetchApi<Settlement>(`/api/trips/${tripId}/expenses/settlement`);
+}
+
+// ── 위치 공유 API ────────────────────────────────────────
+
+// 내 위치 전송 (10초 간격)
+export async function postLocation(
+  tripId: number,
+  data: { lat: number; lng: number; accuracy: number },
+): Promise<ApiResponse> {
+  return fetchApi(`/api/trips/${tripId}/locations`, {
+    method: 'POST',
+    body: JSON.stringify(data),
+  });
+}
+
+// 가족 위치 조회 (최근 5분 이내 활성 멤버만)
+export async function getLocations(
+  tripId: number,
+): Promise<ApiResponse<LocationData[]>> {
+  return fetchApi<LocationData[]>(`/api/trips/${tripId}/locations`);
 }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- 테라코타 배경 원 -->
+  <circle cx="256" cy="256" r="256" fill="#C8552A"/>
+  <!-- 흰색 비행기 아이콘 -->
+  <g transform="translate(256,256) rotate(-45)">
+    <path d="M-20,-120 L20,-120 L20,0 L80,60 L80,80 L20,40 L20,100 L40,115 L40,130 L0,118 L-40,130 L-40,115 L-20,100 L-20,40 L-80,80 L-80,60 L-20,0 Z" fill="white"/>
+  </g>
+  <!-- 스위스 십자 장식 (우하단) -->
+  <g transform="translate(380,380)">
+    <rect x="-18" y="-6" width="36" height="12" rx="2" fill="rgba(255,255,255,0.6)"/>
+    <rect x="-6" y="-18" width="12" height="36" rx="2" fill="rgba(255,255,255,0.6)"/>
+  </g>
+</svg>

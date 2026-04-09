@@ -1,0 +1,29 @@
+{
+  "name": "2026 스위스·이탈리아 가족여행",
+  "short_name": "가족여행",
+  "description": "가족 4인 여행 올인원 앱 — 일정·경비·지도·비상정보",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FEF9E7",
+  "theme_color": "#C8552A",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

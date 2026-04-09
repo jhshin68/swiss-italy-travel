@@ -105,6 +105,17 @@ export interface Settlement {
   balances: Record<string, number>;
 }
 
+// 위치 공유 — 가족 멤버의 현재 위치 정보
+export interface LocationData {
+  memberId: string;
+  memberName: string;
+  emoji: string;
+  lat: number;
+  lng: number;
+  accuracy: number;
+  updatedAt: string;
+}
+
 // 장소 카드 — 각 일정의 세부 장소 정보
 export type SpotCategory = 'transport' | 'sightseeing' | 'meal' | 'hotel' | 'activity';
 

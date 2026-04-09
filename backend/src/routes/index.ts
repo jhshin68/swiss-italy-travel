@@ -7,6 +7,7 @@ import authRouter from './auth';
 import tripsRouter from './trips';
 import expensesRouter from './expenses';
 import expensesStatsRouter from './expenses-stats';
+import locationsRouter from './locations';
 
 const router = Router();
 
@@ -24,5 +25,8 @@ router.use('/trips', expensesRouter);
 
 // 경비 통계 + 정산 API (summary, settle)
 router.use('/trips', expensesStatsRouter);
+
+// 위치 공유 API (POST 전송, GET 조회)
+router.use('/trips', locationsRouter);
 
 export default router;
