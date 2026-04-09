@@ -173,6 +173,14 @@ export function getMemberStringId(tripId: number, dbId: number): string {
   return String(dbId);
 }
 
+/** 멤버 DB id → 표시용 이름 (진형, 지현 등) */
+export function getMemberName(tripId: number, dbId: number): string {
+  const db = getDb();
+  const row = db.prepare('SELECT name FROM members WHERE trip_id = ? AND id = ?')
+    .get(tripId, dbId) as { name: string } | undefined;
+  return row?.name ?? String(dbId);
+}
+
 /** 환율 조회: 해당 날짜 → 최근 환율 → 기본값 순서 */
 export function getExchangeRate(fromCurr: string, date: string): number {
   if (fromCurr === 'KRW') return 1;

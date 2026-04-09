@@ -9,7 +9,7 @@ import { calcBalances, calcMinTransfers } from '../lib/settlement';
 import type { ApiResponse } from '../types';
 import type { BalanceMap, Transfer } from '../lib/settlement';
 import {
-  tripIdParamSchema, validateTripAccess, getMemberStringId,
+  tripIdParamSchema, validateTripAccess, getMemberName,
   type ExpenseSummary, type SummaryRow,
 } from './expenses-helpers';
 
@@ -109,10 +109,10 @@ router.get(
         ).all(e.id) as Array<{ member_id: number; amount: number }>;
 
         return {
-          paidById: getMemberStringId(tripIdNum, e.paid_by),
+          paidById: getMemberName(tripIdNum, e.paid_by),
           amountKRW: e.amount_krw,
           splits: splits.map((s) => ({
-            memberId: getMemberStringId(tripIdNum, s.member_id),
+            memberId: getMemberName(tripIdNum, s.member_id),
             amount: s.amount,
           })),
         };
