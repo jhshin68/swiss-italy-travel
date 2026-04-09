@@ -10,7 +10,7 @@ import type { ApiResponse } from '../types';
 import type { BalanceMap, Transfer } from '../lib/settlement';
 import {
   tripIdParamSchema, validateTripAccess, getMemberName,
-  type ExpenseSummary, type SummaryRow,
+  type ExpenseSummary, type PayerSummary, type SummaryRow,
 } from './expenses-helpers';
 
 const router = Router();
@@ -53,12 +53,15 @@ router.get(
       for (const r of byCatRows) byCategory[r.key] = r.total;
 
       const byPayerRows = db.prepare(`
-        SELECT m.name AS key, COALESCE(SUM(e.amount_krw), 0) AS total
+        SELECT m.name AS name, m.emoji AS emoji, COALESCE(SUM(e.amount_krw), 0) AS total
         FROM expenses e INNER JOIN members m ON m.id = e.paid_by
         WHERE e.trip_id = ? GROUP BY e.paid_by
-      `).all(tripIdNum) as SummaryRow[];
-      const byPayer: Record<string, number> = {};
-      for (const r of byPayerRows) byPayer[r.key] = r.total;
+      `).all(tripIdNum) as Array<{ name: string; emoji: string; total: number }>;
+      const byPayer: PayerSummary[] = byPayerRows.map((r) => ({
+        name: r.name,
+        emoji: r.emoji,
+        totalKrw: r.total,
+      }));
 
       const byDateRows = db.prepare(
         'SELECT date AS key, COALESCE(SUM(amount_krw), 0) AS total FROM expenses WHERE trip_id = ? GROUP BY date ORDER BY date',

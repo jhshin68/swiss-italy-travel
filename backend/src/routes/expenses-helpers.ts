@@ -33,10 +33,16 @@ export interface ExpenseResponse {
   updatedAt: string;
 }
 
+export interface PayerSummary {
+  name: string;
+  emoji: string;
+  totalKrw: number;
+}
+
 export interface ExpenseSummary {
   totalKrw: number;
   byCategory: Record<string, number>;
-  byPayer: Record<string, number>;
+  byPayer: PayerSummary[];
   byDate: Record<string, number>;
   count: number;
 }
