@@ -7,7 +7,7 @@ import type { Currency, ExpenseCategory, CreateExpenseRequest } from '@/types';
 
 // 카테고리 선택지
 const CATEGORIES: Array<{ value: ExpenseCategory; icon: string; label: string }> = [
-  { value: 'meal', icon: '\u{1F37D}\uFE0F', label: '식사' },
+  { value: 'food', icon: '\u{1F37D}\uFE0F', label: '식사' },
   { value: 'transport', icon: '\u{1F682}', label: '교통' },
   { value: 'activity', icon: '\u26F0\uFE0F', label: '액티비티' },
   { value: 'shopping', icon: '\u{1F6CD}\uFE0F', label: '쇼핑' },
@@ -42,7 +42,7 @@ export function ExpenseForm({ tripId, onClose, onSaved }: ExpenseFormProps) {
 
   const [amount, setAmount] = useState('');
   const [currency, setCurrency] = useState<Currency>('CHF');
-  const [category, setCategory] = useState<ExpenseCategory>('meal');
+  const [category, setCategory] = useState<ExpenseCategory>('food');
   const [description, setDescription] = useState('');
   const [paidBy, setPaidBy] = useState(member?.memberId ?? 'jinhyung');
   const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));

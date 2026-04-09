@@ -127,7 +127,7 @@ export async function getExpenseSummary(
 export async function getSettlement(
   tripId: string,
 ): Promise<ApiResponse<Settlement>> {
-  return fetchApi<Settlement>(`/api/trips/${tripId}/expenses/settlement`);
+  return fetchApi<Settlement>(`/api/trips/${tripId}/expenses/settle`);
 }
 
 // ── 위치 공유 API ────────────────────────────────────────

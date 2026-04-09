@@ -67,7 +67,7 @@ export function useOfflineSync(tripId: number): OfflineSyncState {
           const result = await createExpense(String(tripId), {
             amount: expense.amount,
             currency: expense.currency as 'KRW' | 'CHF' | 'EUR',
-            category: expense.category as 'meal' | 'transport' | 'activity' | 'shopping' | 'accommodation' | 'etc',
+            category: expense.category as 'food' | 'transport' | 'activity' | 'shopping' | 'accommodation' | 'etc',
             description: expense.description,
             paidBy: expense.paidBy,
             date: expense.date,

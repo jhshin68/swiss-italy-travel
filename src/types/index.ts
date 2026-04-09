@@ -59,7 +59,7 @@ export type Currency = 'CHF' | 'EUR' | 'KRW';
 
 // 경비 카테고리
 export type ExpenseCategory =
-  | 'meal'
+  | 'food'
   | 'transport'
   | 'activity'
   | 'shopping'
