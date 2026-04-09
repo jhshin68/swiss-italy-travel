@@ -1,0 +1,22 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e118]:
+    - generic [ref=e119]:
+      - heading "누구세요? 😊" [level=1] [ref=e120]
+      - paragraph [ref=e121]: 멤버를 선택해주세요
+    - generic [ref=e122]:
+      - button "👨 진형" [ref=e123]:
+        - generic [ref=e124]: 👨
+        - generic [ref=e125]: 진형
+      - button "👩 지현" [ref=e126]:
+        - generic [ref=e127]: 👩
+        - generic [ref=e128]: 지현
+      - button "👦 동우" [ref=e129]:
+        - generic [ref=e130]: 👦
+        - generic [ref=e131]: 동우
+      - button "👧 유진" [ref=e132]:
+        - generic [ref=e133]: 👧
+        - generic [ref=e134]: 유진
+    - button "← PIN 다시 입력" [ref=e135]
+  - button "Open Next.js Dev Tools" [ref=e10] [cursor=pointer]:
+    - img [ref=e11]
+  - alert [ref=e14]

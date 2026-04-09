@@ -1,0 +1,85 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e136]:
+    - main [ref=e137]:
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e140]: 👨
+          - generic [ref=e141]:
+            - heading "안녕하세요, 진형님!" [level=1] [ref=e142]
+            - paragraph [ref=e143]: 스위스 · 이탈리아 가족 여행
+        - generic [ref=e144]:
+          - paragraph [ref=e145]: 여행까지 D-182
+          - paragraph [ref=e146]: 설레는 준비 기간입니다!
+          - paragraph [ref=e147]: 2026.10.08 (목) ~ 10.19 (월) · 11박 12일
+        - generic [ref=e148]:
+          - heading "✈️ 항공편" [level=2] [ref=e149]
+          - generic [ref=e150]:
+            - generic [ref=e151]: 출국
+            - generic [ref=e152]:
+              - paragraph [ref=e153]: KE917 · 인천(ICN) → 취리히(ZRH)
+              - paragraph [ref=e154]: 10월 8일 (목) 12:25 출발
+          - generic [ref=e155]:
+            - generic [ref=e156]: 귀국
+            - generic [ref=e157]:
+              - paragraph [ref=e158]: KE932 · 로마(FCO) → 인천(ICN)
+              - paragraph [ref=e159]: 10월 19일 (월) 21:25 출발
+          - paragraph [ref=e160]: "예약번호: FLTZFS"
+        - generic [ref=e161]:
+          - heading "🏨 숙소 일정" [level=2] [ref=e162]
+          - list [ref=e163]:
+            - listitem [ref=e164]:
+              - generic [ref=e165]: 🇨🇭
+              - generic [ref=e166]: 취리히
+              - generic [ref=e167]: 1박
+              - generic [ref=e168]: Day 1
+            - listitem [ref=e169]:
+              - generic [ref=e170]: 🏔️
+              - generic [ref=e171]: 그린델발트
+              - generic [ref=e172]: 3박
+              - generic [ref=e173]: Day 2~4
+            - listitem [ref=e174]:
+              - generic [ref=e175]: ⛰️
+              - generic [ref=e176]: 체르마트
+              - generic [ref=e177]: 2박
+              - generic [ref=e178]: Day 5~6
+            - listitem [ref=e179]:
+              - generic [ref=e180]: 🇮🇹
+              - generic [ref=e181]: 피렌체
+              - generic [ref=e182]: 3박
+              - generic [ref=e183]: Day 8~10
+            - listitem [ref=e184]:
+              - generic [ref=e185]: 🏛️
+              - generic [ref=e186]: 로마
+              - generic [ref=e187]: 2박
+              - generic [ref=e188]: Day 11~12
+        - button "로그아웃" [ref=e189]
+    - navigation [ref=e190]:
+      - list [ref=e191]:
+        - listitem [ref=e192]:
+          - link "🏠 홈" [ref=e193] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e194]: 🏠
+            - generic [ref=e195]: 홈
+        - listitem [ref=e196]:
+          - link "📅 일정" [ref=e197] [cursor=pointer]:
+            - /url: /itinerary
+            - generic [ref=e198]: 📅
+            - generic [ref=e199]: 일정
+        - listitem [ref=e200]:
+          - link "🗺️ 지도" [ref=e201] [cursor=pointer]:
+            - /url: /map
+            - generic [ref=e202]: 🗺️
+            - generic [ref=e203]: 지도
+        - listitem [ref=e204]:
+          - link "💰 경비" [ref=e205] [cursor=pointer]:
+            - /url: /expenses
+            - generic [ref=e206]: 💰
+            - generic [ref=e207]: 경비
+        - listitem [ref=e208]:
+          - link "ℹ️ 비상" [ref=e209] [cursor=pointer]:
+            - /url: /info
+            - generic [ref=e210]: ℹ️
+            - generic [ref=e211]: 비상
+  - button "Open Next.js Dev Tools" [ref=e10] [cursor=pointer]:
+    - img [ref=e11]
+  - alert [ref=e14]

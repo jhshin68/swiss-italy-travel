@@ -1,0 +1,22 @@
+- generic [ref=e1]:
+  - generic [ref=e90]:
+    - generic [ref=e91]:
+      - generic [ref=e92]: ✈️
+      - heading "swiss-italy-travel" [level=1] [ref=e93]
+      - paragraph [ref=e94]: 가족 여행 컴패니언
+    - paragraph [ref=e96]: PIN 6자리를 입력하세요
+    - generic [ref=e105]:
+      - button "1" [ref=e106]
+      - button "2" [ref=e107]
+      - button "3" [ref=e108]
+      - button "4" [ref=e109]
+      - button "5" [active] [ref=e110]
+      - button "6" [ref=e111]
+      - button "7" [ref=e112]
+      - button "8" [ref=e113]
+      - button "9" [ref=e114]
+      - button "0" [ref=e116]
+      - button "삭제" [ref=e117]: ←
+  - button "Open Next.js Dev Tools" [ref=e10] [cursor=pointer]:
+    - img [ref=e11]
+  - alert [ref=e14]

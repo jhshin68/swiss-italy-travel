@@ -27,7 +27,8 @@ Next.js(Vercel) + Express + SQLite(Oracle VM) 풀스택 구조.
 - 프론트엔드: https://swiss-italy-travel.vercel.app
 - 백엔드 API: https://slp-travel.duckdns.org
 - GitHub: https://github.com/jhshin68/swiss-italy-travel
-- Oracle VM: 140.245.76.255 (포트 22 SSH, 포트 3001 API)
+- Oracle VM: 144.24.69.214 (포트 22 SSH, 포트 3001 API)
+- SSH 접속: `ssh slpower-n8n` (키: ~/.ssh/oci_key)
 
 ---
 

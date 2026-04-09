@@ -1,0 +1,205 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - main [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - heading "🗺️ 지도" [level=1] [ref=e19]
+            - paragraph [ref=e20]: 스위스 · 이탈리아 여행 루트
+          - button "전체 경로" [ref=e21]
+        - generic [ref=e22]:
+          - button "Day 1 취리히" [ref=e23]:
+            - generic [ref=e24]: Day
+            - generic [ref=e25]: "1"
+            - generic [ref=e26]: 취리히
+          - button "Day 2 베른→그린델발트" [ref=e27]:
+            - generic [ref=e28]: Day
+            - generic [ref=e29]: "2"
+            - generic [ref=e30]: 베른→그린델발트
+          - button "Day 3 그린델발트" [ref=e31]:
+            - generic [ref=e32]: Day
+            - generic [ref=e33]: "3"
+            - generic [ref=e34]: 그린델발트
+          - button "Day 4 그린델발트" [ref=e35]:
+            - generic [ref=e36]: Day
+            - generic [ref=e37]: "4"
+            - generic [ref=e38]: 그린델발트
+          - button "Day 5 체르마트" [ref=e39]:
+            - generic [ref=e40]: Day
+            - generic [ref=e41]: "5"
+            - generic [ref=e42]: 체르마트
+          - button "Day 6 체르마트" [ref=e43]:
+            - generic [ref=e44]: Day
+            - generic [ref=e45]: "6"
+            - generic [ref=e46]: 체르마트
+          - button "Day 7 밀라노 경유→피렌체" [ref=e47]:
+            - generic [ref=e48]: Day
+            - generic [ref=e49]: "7"
+            - generic [ref=e50]: 밀라노 경유→피렌체
+          - button "Day 8 피렌체" [ref=e51]:
+            - generic [ref=e52]: Day
+            - generic [ref=e53]: "8"
+            - generic [ref=e54]: 피렌체
+          - button "Day 9 피렌체" [ref=e55]:
+            - generic [ref=e56]: Day
+            - generic [ref=e57]: "9"
+            - generic [ref=e58]: 피렌체
+          - button "Day 10 로마" [active] [ref=e59]:
+            - generic [ref=e60]: Day
+            - generic [ref=e61]: "10"
+            - generic [ref=e62]: 로마
+          - button "Day 11 로마" [ref=e63]:
+            - generic [ref=e64]: Day
+            - generic [ref=e65]: "11"
+            - generic [ref=e66]: 로마
+          - button "Day 12 로마→귀국" [ref=e67]:
+            - generic [ref=e68]: Day
+            - generic [ref=e69]: "12"
+            - generic [ref=e70]: 로마→귀국
+        - generic [ref=e72]:
+          - generic:
+            - generic:
+              - img
+            - button "Marker" [ref=e74] [cursor=pointer]
+          - generic [ref=e75]:
+            - link "Leaflet" [ref=e76] [cursor=pointer]:
+              - /url: https://leafletjs.com
+              - img [ref=e77]
+              - text: Leaflet
+            - text: "| ©"
+            - link "OpenStreetMap" [ref=e81] [cursor=pointer]:
+              - /url: https://www.openstreetmap.org/copyright
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85]: 로마
+            - generic [ref=e86]: 피렌체→로마 이동 · 트레비 야경
+          - generic [ref=e87]:
+            - generic [ref=e88]: 🚂
+            - generic [ref=e89]:
+              - paragraph [ref=e91]: 피렌체 SMN 출발역
+              - paragraph [ref=e92]: Frecciarossa 로마행 · €15~30/인 · 약 1시간 30분
+              - generic [ref=e93]:
+                - link "🗺️ 지도" [ref=e94] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Firenze+Santa+Maria+Novella+Station+Piazza+della+Stazione+50123+Florence+Italy
+                - link "🧭 길안내" [ref=e95] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Firenze+Santa+Maria+Novella+Station+Piazza+della+Stazione+50123+Florence+Italy
+          - generic [ref=e96]:
+            - generic [ref=e97]: 🚂
+            - generic [ref=e98]:
+              - paragraph [ref=e100]: Sixt 렌터카 반납
+              - paragraph [ref=e101]: 렌터카 반납 · 테르미니 역 근처 지점 확인
+              - generic [ref=e102]:
+                - link "🗺️ 지도" [ref=e103] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Sixt+Car+Rental+Rome+Via+Giovanni+Giolitti+34+00185+Rome+Italy
+                - link "🧭 길안내" [ref=e104] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Sixt+Car+Rental+Rome+Via+Giovanni+Giolitti+34+00185+Rome+Italy
+          - generic [ref=e105]:
+            - generic [ref=e106]: 🚂
+            - generic [ref=e107]:
+              - paragraph [ref=e109]: 로마 테르미니 역 도착
+              - paragraph [ref=e110]: 로마 Frecciarossa 도착 · 호텔 체크인 후 관광 시작
+              - generic [ref=e111]:
+                - link "🗺️ 지도" [ref=e112] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Roma+Termini+Piazza+dei+Cinquecento+00185+Rome+Italy
+                - link "🧭 길안내" [ref=e113] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Roma+Termini+Piazza+dei+Cinquecento+00185+Rome+Italy
+          - generic [ref=e114]:
+            - generic [ref=e115]: 🏨
+            - generic [ref=e116]:
+              - paragraph [ref=e118]: 호텔 짐 보관 후 출발
+              - paragraph [ref=e119]: 체크인 · 짐 보관 후 즉시 출발 (효율적인 오후 활용)
+              - generic [ref=e120]:
+                - link "🗺️ 지도" [ref=e121] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Rome+City+Center+00185+Rome+Italy
+                - link "🧭 길안내" [ref=e122] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Rome+City+Center+00185+Rome+Italy
+          - generic [ref=e123]:
+            - generic [ref=e124]: 🏛
+            - generic [ref=e125]:
+              - paragraph [ref=e127]: 판테온
+              - paragraph [ref=e128]: 2000년 전 로마 최고 건축 · €5/인 · 오쿨루스(천창) 포토 필수
+              - generic [ref=e129]:
+                - link "🗺️ 지도" [ref=e130] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Pantheon+Piazza+della+Rotonda+00186+Rome+Italy
+                - link "🧭 길안내" [ref=e131] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Pantheon+Piazza+della+Rotonda+00186+Rome+Italy
+          - generic [ref=e154]:
+            - generic [ref=e155]: 🏛
+            - generic [ref=e156]:
+              - paragraph [ref=e158]: 나보나 광장
+              - paragraph [ref=e159]: 베르니니 4대강 분수 · 바로크 광장 · 야외 화가 · 포토스팟
+              - generic [ref=e160]:
+                - link "🗺️ 지도" [ref=e161] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Piazza+Navona+00186+Rome+Italy
+                - link "🧭 길안내" [ref=e162] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Piazza+Navona+00186+Rome+Italy
+          - generic [ref=e163]:
+            - generic [ref=e164]: 🍽
+            - generic [ref=e165]:
+              - paragraph [ref=e167]: 지올리띠 젤라또
+              - paragraph [ref=e168]: 🏆미션⑩ · 로마 3대 젤라또 · 1900년 창업 · 피스타치오 추천
+              - generic [ref=e169]:
+                - link "🗺️ 지도" [ref=e170] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Giolitti+Via+degli+Uffici+del+Vicario+40+00186+Rome+Italy
+                - link "🧭 길안내" [ref=e171] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Giolitti+Via+degli+Uffici+del+Vicario+40+00186+Rome+Italy
+          - generic [ref=e172]:
+            - generic [ref=e173]: 🏛
+            - generic [ref=e174]:
+              - paragraph [ref=e176]: 트레비 분수 야경
+              - paragraph [ref=e177]: 🏆미션⑪ · 동전 던지기 · 야경이 낮보다 아름다움 · 20:00~22:00 추천
+              - generic [ref=e178]:
+                - link "🗺️ 지도" [ref=e179] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Fontana+di+Trevi+Piazza+di+Trevi+00187+Rome+Italy
+                - link "🧭 길안내" [ref=e180] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Fontana+di+Trevi+Piazza+di+Trevi+00187+Rome+Italy
+          - generic [ref=e181]:
+            - generic [ref=e182]: 🍽
+            - generic [ref=e183]:
+              - paragraph [ref=e185]: 로마 저녁 식당
+              - paragraph [ref=e186]: 로마 전통 트라토리아 · 까르보나라·카초에페페 추천
+              - generic [ref=e187]:
+                - link "🗺️ 지도" [ref=e188] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Osteria+dell'Angelo+Via+Giovanni+Bettolo+24+00195+Rome+Italy
+                - link "🧭 길안내" [ref=e189] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Osteria+dell'Angelo+Via+Giovanni+Bettolo+24+00195+Rome+Italy
+          - generic [ref=e190]:
+            - generic [ref=e191]: 🏨
+            - generic [ref=e192]:
+              - paragraph [ref=e194]: 로마 호텔
+              - paragraph [ref=e195]: 3박 · 테르미니역 도보권 또는 나보나 근처 추천
+              - generic [ref=e196]:
+                - link "🗺️ 지도" [ref=e197] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Rome+City+Center+00185+Rome+Italy
+                - link "🧭 길안내" [ref=e198] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Rome+City+Center+00185+Rome+Italy
+    - navigation [ref=e132]:
+      - list [ref=e133]:
+        - listitem [ref=e134]:
+          - link "🏠 홈" [ref=e135] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e136]: 🏠
+            - generic [ref=e137]: 홈
+        - listitem [ref=e138]:
+          - link "📅 일정" [ref=e139] [cursor=pointer]:
+            - /url: /itinerary
+            - generic [ref=e140]: 📅
+            - generic [ref=e141]: 일정
+        - listitem [ref=e142]:
+          - link "🗺️ 지도" [ref=e143] [cursor=pointer]:
+            - /url: /map
+            - generic [ref=e144]: 🗺️
+            - generic [ref=e145]: 지도
+        - listitem [ref=e146]:
+          - link "💰 경비" [ref=e147] [cursor=pointer]:
+            - /url: /expenses
+            - generic [ref=e148]: 💰
+            - generic [ref=e149]: 경비
+        - listitem [ref=e150]:
+          - link "ℹ️ 비상" [ref=e151] [cursor=pointer]:
+            - /url: /info
+            - generic [ref=e152]: ℹ️
+            - generic [ref=e153]: 비상
+  - button "Open Next.js Dev Tools" [ref=e10] [cursor=pointer]:
+    - img [ref=e11]
+  - alert [ref=e14]

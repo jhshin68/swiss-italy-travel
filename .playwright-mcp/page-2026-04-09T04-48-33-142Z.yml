@@ -1,0 +1,49 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - main [ref=e15]:
+      - generic [ref=e317]:
+        - generic [ref=e319]:
+          - heading "💰 경비" [level=1] [ref=e320]
+          - paragraph [ref=e321]: 가족 여행 경비 관리
+        - generic [ref=e322]:
+          - button "오늘" [ref=e323]
+          - button "전체" [ref=e324]
+          - button "정산" [ref=e325]
+        - generic [ref=e327]:
+          - generic [ref=e328]:
+            - paragraph [ref=e329]: 2026-04-09
+            - paragraph [ref=e330]: ₩0
+          - generic [ref=e331]:
+            - paragraph [ref=e332]: 💰
+            - paragraph [ref=e333]: 오늘 아직 지출이 없어요
+        - button "지출 추가" [ref=e334]: +
+    - navigation [ref=e68]:
+      - list [ref=e69]:
+        - listitem [ref=e70]:
+          - link "🏠 홈" [ref=e71] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e72]: 🏠
+            - generic [ref=e73]: 홈
+        - listitem [ref=e74]:
+          - link "📅 일정" [ref=e75] [cursor=pointer]:
+            - /url: /itinerary
+            - generic [ref=e76]: 📅
+            - generic [ref=e77]: 일정
+        - listitem [ref=e78]:
+          - link "🗺️ 지도" [ref=e79] [cursor=pointer]:
+            - /url: /map
+            - generic [ref=e80]: 🗺️
+            - generic [ref=e81]: 지도
+        - listitem [ref=e82]:
+          - link "💰 경비" [active] [ref=e83] [cursor=pointer]:
+            - /url: /expenses
+            - generic [ref=e84]: 💰
+            - generic [ref=e85]: 경비
+        - listitem [ref=e86]:
+          - link "ℹ️ 비상" [ref=e87] [cursor=pointer]:
+            - /url: /info
+            - generic [ref=e88]: ℹ️
+            - generic [ref=e89]: 비상
+  - button "Open Next.js Dev Tools" [ref=e10] [cursor=pointer]:
+    - img [ref=e11]
+  - alert [ref=e14]

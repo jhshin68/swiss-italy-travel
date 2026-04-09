@@ -1,0 +1,377 @@
+{
+  "timestamp": "2026-04-09T03:03:41.750Z",
+  "reason": "compaction",
+  "status": {
+    "version": "2.0",
+    "lastUpdated": "2026-04-09T02:58:19.917Z",
+    "activeFeatures": [
+      "db",
+      "backend",
+      "middleware",
+      "routes",
+      "travel",
+      "stores",
+      "login",
+      "select-member",
+      "layout",
+      "(app)",
+      "itinerary"
+    ],
+    "primaryFeature": "db",
+    "features": {
+      "db": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-29T08:49:17.981Z",
+          "lastUpdated": "2026-04-09T02:47:11.594Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\backend\\src\\db\\seed.ts"
+      },
+      "backend": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-29T08:49:27.066Z",
+          "lastUpdated": "2026-04-09T02:34:19.892Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\backend\\src\\index.ts"
+      },
+      "middleware": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-29T08:49:33.648Z",
+          "lastUpdated": "2026-04-09T02:33:30.289Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\backend\\src\\middleware\\auth.ts"
+      },
+      "routes": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:34:07.972Z",
+          "lastUpdated": "2026-04-09T02:56:15.838Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\backend\\src\\routes\\index.ts"
+      },
+      "travel": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:39:23.427Z",
+          "lastUpdated": "2026-04-09T02:58:19.917Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\page.tsx"
+      },
+      "stores": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:39:34.806Z",
+          "lastUpdated": "2026-04-09T02:39:34.806Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\stores\\auth-store.ts"
+      },
+      "login": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:40:03.620Z",
+          "lastUpdated": "2026-04-09T02:40:03.620Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(auth)\\login\\page.tsx"
+      },
+      "select-member": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:40:20.935Z",
+          "lastUpdated": "2026-04-09T02:40:20.935Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(auth)\\select-member\\page.tsx"
+      },
+      "layout": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:56:35.232Z",
+          "lastUpdated": "2026-04-09T02:56:35.232Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\components\\layout\\bottom-nav.tsx"
+      },
+      "(app)": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:56:43.267Z",
+          "lastUpdated": "2026-04-09T02:57:16.166Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(app)\\page.tsx"
+      },
+      "itinerary": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:57:37.134Z",
+          "lastUpdated": "2026-04-09T02:58:12.303Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(app)\\itinerary\\page.tsx"
+      }
+    },
+    "pipeline": {
+      "currentPhase": 1,
+      "level": "Dynamic",
+      "phaseHistory": []
+    },
+    "session": {
+      "startedAt": "2026-03-29T08:41:25.646Z",
+      "onboardingCompleted": false,
+      "lastActivity": "2026-04-09T02:58:19.917Z"
+    },
+    "history": [
+      {
+        "timestamp": "2026-03-29T08:49:17.981Z",
+        "feature": "db",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-29T08:49:27.066Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-29T08:49:33.648Z",
+        "feature": "middleware",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-29T08:49:36.157Z",
+        "feature": "middleware",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-29T08:49:41.125Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-29T08:49:49.811Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:33:12.425Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:33:30.289Z",
+        "feature": "middleware",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:34:07.972Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:34:15.811Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:34:17.607Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:34:19.892Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:35:36.399Z",
+        "feature": "db",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:39:23.427Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:39:29.575Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:39:34.806Z",
+        "feature": "stores",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:40:03.620Z",
+        "feature": "login",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:40:20.935Z",
+        "feature": "select-member",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:40:32.734Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:40:38.684Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:47:11.594Z",
+        "feature": "db",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:07.579Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:10.268Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:11.583Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:14.091Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:15.838Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:25.023Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:35.232Z",
+        "feature": "layout",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:43.267Z",
+        "feature": "(app)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:57:16.166Z",
+        "feature": "(app)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:57:37.134Z",
+        "feature": "itinerary",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:58:12.303Z",
+        "feature": "itinerary",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:58:19.917Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      }
+    ]
+  }
+}

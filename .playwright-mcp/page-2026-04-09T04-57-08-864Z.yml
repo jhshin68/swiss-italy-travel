@@ -1,0 +1,56 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - main [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e18]:
+          - heading "💰 경비" [level=1] [ref=e19]
+          - paragraph [ref=e20]: 가족 여행 경비 관리
+        - generic [ref=e21]:
+          - button "오늘" [ref=e22]
+          - button "전체" [ref=e23]
+          - button "정산" [ref=e24]
+        - generic [ref=e26]:
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: 2026-04-09
+            - paragraph [ref=e121]: ₩22,500,000
+          - list [ref=e122]:
+            - listitem [ref=e123]:
+              - generic [ref=e124]: 📦
+              - generic [ref=e125]:
+                - paragraph [ref=e126]: 테스트 점심 파스타
+                - paragraph [ref=e127]: 진형 · 13:56
+              - generic [ref=e128]:
+                - paragraph [ref=e129]: CHF 15,000
+                - paragraph [ref=e130]: ₩22,500,000
+              - button "삭제" [ref=e131]: ✕
+        - button "지출 추가" [ref=e33]: +
+    - navigation [ref=e34]:
+      - list [ref=e35]:
+        - listitem [ref=e36]:
+          - link "🏠 홈" [ref=e37] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e38]: 🏠
+            - generic [ref=e39]: 홈
+        - listitem [ref=e40]:
+          - link "📅 일정" [ref=e41] [cursor=pointer]:
+            - /url: /itinerary
+            - generic [ref=e42]: 📅
+            - generic [ref=e43]: 일정
+        - listitem [ref=e44]:
+          - link "🗺️ 지도" [ref=e45] [cursor=pointer]:
+            - /url: /map
+            - generic [ref=e46]: 🗺️
+            - generic [ref=e47]: 지도
+        - listitem [ref=e48]:
+          - link "💰 경비" [ref=e49] [cursor=pointer]:
+            - /url: /expenses
+            - generic [ref=e50]: 💰
+            - generic [ref=e51]: 경비
+        - listitem [ref=e52]:
+          - link "ℹ️ 비상" [ref=e53] [cursor=pointer]:
+            - /url: /info
+            - generic [ref=e54]: ℹ️
+            - generic [ref=e55]: 비상
+  - button "Open Next.js Dev Tools" [ref=e10] [cursor=pointer]:
+    - img [ref=e11]
+  - alert [ref=e14]

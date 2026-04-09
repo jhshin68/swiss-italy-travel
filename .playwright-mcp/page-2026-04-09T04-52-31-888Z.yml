@@ -1,0 +1,215 @@
+- generic [ref=e1]:
+  - generic [ref=e136]:
+    - main [ref=e137]:
+      - generic [ref=e212]:
+        - generic [ref=e213]:
+          - heading "📅 일정" [level=1] [ref=e214]
+          - paragraph [ref=e215]: 11박 12일 스위스 · 이탈리아
+        - generic [ref=e216]:
+          - button "Day 1 취리히" [ref=e217]:
+            - generic [ref=e218]: Day
+            - generic [ref=e219]: "1"
+            - generic [ref=e220]: 취리히
+          - button "Day 2 베른→그린델발트" [ref=e221]:
+            - generic [ref=e222]: Day
+            - generic [ref=e223]: "2"
+            - generic [ref=e224]: 베른→그린델발트
+          - button "Day 3 그린델발트" [active] [ref=e225]:
+            - generic [ref=e226]: Day
+            - generic [ref=e227]: "3"
+            - generic [ref=e228]: 그린델발트
+          - button "Day 4 그린델발트" [ref=e229]:
+            - generic [ref=e230]: Day
+            - generic [ref=e231]: "4"
+            - generic [ref=e232]: 그린델발트
+          - button "Day 5 체르마트" [ref=e233]:
+            - generic [ref=e234]: Day
+            - generic [ref=e235]: "5"
+            - generic [ref=e236]: 체르마트
+          - button "Day 6 체르마트" [ref=e237]:
+            - generic [ref=e238]: Day
+            - generic [ref=e239]: "6"
+            - generic [ref=e240]: 체르마트
+          - button "Day 7 ⚠ 밀라노 경유→피렌체" [ref=e241]:
+            - generic [ref=e242]: Day
+            - generic [ref=e243]: 7 ⚠
+            - generic [ref=e244]: 밀라노 경유→피렌체
+          - button "Day 8 피렌체" [ref=e245]:
+            - generic [ref=e246]: Day
+            - generic [ref=e247]: "8"
+            - generic [ref=e248]: 피렌체
+          - button "Day 9 피렌체" [ref=e249]:
+            - generic [ref=e250]: Day
+            - generic [ref=e251]: "9"
+            - generic [ref=e252]: 피렌체
+          - button "Day 10 로마" [ref=e253]:
+            - generic [ref=e254]: Day
+            - generic [ref=e255]: "10"
+            - generic [ref=e256]: 로마
+          - button "Day 11 로마" [ref=e257]:
+            - generic [ref=e258]: Day
+            - generic [ref=e259]: "11"
+            - generic [ref=e260]: 로마
+          - button "Day 12 로마→귀국" [ref=e261]:
+            - generic [ref=e262]: Day
+            - generic [ref=e263]: "12"
+            - generic [ref=e264]: 로마→귀국
+        - generic [ref=e265]:
+          - generic [ref=e266]:
+            - generic [ref=e267]:
+              - paragraph [ref=e268]: Day 3 - 산악 하이킹 · 에메랄드 호수
+              - paragraph [ref=e269]: 2026-10-10 · 그린델발트
+            - generic [ref=e270]: 산악 하이킹 · 에메랄드 호수
+          - paragraph [ref=e271]: 🏨 그린델발트 (연박)
+        - generic [ref=e272]:
+          - generic [ref=e323]:
+            - generic [ref=e324]:
+              - generic [ref=e325]: 🚂
+              - generic [ref=e326]: 교통
+            - generic [ref=e327]:
+              - paragraph [ref=e329]: 멘리헨 곤돌라 탑승장 (그린델발트)
+              - generic [ref=e330]:
+                - link "🗺️ 지도" [ref=e331] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Gondelbahn+Grindelwald-Männlichen+Dorfstrasse+3818+Grindelwald+Switzerland
+                - link "🧭 길안내" [ref=e332] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Gondelbahn+Grindelwald-Männlichen+Dorfstrasse+3818+Grindelwald+Switzerland
+          - generic [ref=e333]:
+            - generic [ref=e334]:
+              - generic [ref=e335]: 📍
+              - generic [ref=e336]: 관광
+            - generic [ref=e337]:
+              - paragraph [ref=e339]: 멘리헨 정상 전망대
+              - generic [ref=e340]:
+                - link "🗺️ 지도" [ref=e341] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Männlichen+2343m+3823+Wengen+Switzerland
+                - link "🧭 길안내" [ref=e342] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Männlichen+2343m+3823+Wengen+Switzerland
+          - generic [ref=e343]:
+            - generic [ref=e344]:
+              - generic [ref=e345]: 📍
+              - generic [ref=e346]: 관광
+            - generic [ref=e347]:
+              - paragraph [ref=e349]: 클라이네 샤이덱
+              - generic [ref=e350]:
+                - link "🗺️ 지도" [ref=e351] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Kleine+Scheidegg+3801+Grindelwald+Switzerland
+                - link "🧭 길안내" [ref=e352] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Kleine+Scheidegg+3801+Grindelwald+Switzerland
+          - generic [ref=e353]:
+            - generic [ref=e354]:
+              - generic [ref=e355]: 🍽️
+              - generic [ref=e356]: 식사
+            - generic [ref=e357]:
+              - paragraph [ref=e359]: 클라이네 샤이덱 레스토랑
+              - generic [ref=e360]:
+                - link "🗺️ 지도" [ref=e361] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Restaurant+Kleine+Scheidegg+3801+Grindelwald+Switzerland
+                - link "🧭 길안내" [ref=e362] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Restaurant+Kleine+Scheidegg+3801+Grindelwald+Switzerland
+          - generic [ref=e363]:
+            - generic [ref=e364]:
+              - generic [ref=e365]: 📍
+              - generic [ref=e366]: 관광
+            - generic [ref=e367]:
+              - paragraph [ref=e369]: 라우터브루넨 폭포 마을
+              - generic [ref=e370]:
+                - link "🗺️ 지도" [ref=e371] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Lauterbrunnen+3822+Lauterbrunnen+Switzerland
+                - link "🧭 길안내" [ref=e372] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Lauterbrunnen+3822+Lauterbrunnen+Switzerland
+          - generic [ref=e373]:
+            - generic [ref=e374]:
+              - generic [ref=e375]: 📍
+              - generic [ref=e376]: 관광
+            - generic [ref=e377]:
+              - paragraph [ref=e379]: 뮈렌 마을
+              - generic [ref=e380]:
+                - link "🗺️ 지도" [ref=e381] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Mürren+3825+Mürren+Switzerland
+                - link "🧭 길안내" [ref=e382] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Mürren+3825+Mürren+Switzerland
+          - generic [ref=e383]:
+            - generic [ref=e384]:
+              - generic [ref=e385]: 📍
+              - generic [ref=e386]: 관광
+            - generic [ref=e387]:
+              - paragraph [ref=e389]: 비르크 전망대 (슈투에크)
+              - generic [ref=e390]:
+                - link "🗺️ 지도" [ref=e391] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Birg+2670m+Schilthorn+Bahn+3823+Mürren+Switzerland
+                - link "🧭 길안내" [ref=e392] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Birg+2670m+Schilthorn+Bahn+3823+Mürren+Switzerland
+          - generic [ref=e393]:
+            - generic [ref=e394]:
+              - generic [ref=e395]: 🚂
+              - generic [ref=e396]: 교통
+            - generic [ref=e397]:
+              - paragraph [ref=e399]: 슈테헬베르크 케이블카 하부역
+              - generic [ref=e400]:
+                - link "🗺️ 지도" [ref=e401] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Schilthornbahn+Stechelberg+3824+Stechelberg+Switzerland
+                - link "🧭 길안내" [ref=e402] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Schilthornbahn+Stechelberg+3824+Stechelberg+Switzerland
+          - generic [ref=e403]:
+            - generic [ref=e404]:
+              - generic [ref=e405]: 📍
+              - generic [ref=e406]: 관광
+            - generic [ref=e407]:
+              - paragraph [ref=e409]: 하더쿨름 전망대
+              - generic [ref=e410]:
+                - link "🗺️ 지도" [ref=e411] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Harder+Kulm+1322m+3800+Interlaken+Switzerland
+                - link "🧭 길안내" [ref=e412] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Harder+Kulm+1322m+3800+Interlaken+Switzerland
+          - generic [ref=e413]:
+            - generic [ref=e414]:
+              - generic [ref=e415]: 🍽️
+              - generic [ref=e416]: 식사
+            - generic [ref=e417]:
+              - paragraph [ref=e419]: 인터라켄 COOP 마트
+              - generic [ref=e420]:
+                - link "🗺️ 지도" [ref=e421] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=COOP+Supermarkt+Höheweg+2+3800+Interlaken+Switzerland
+                - link "🧭 길안내" [ref=e422] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=COOP+Supermarkt+Höheweg+2+3800+Interlaken+Switzerland
+          - generic [ref=e423]:
+            - generic [ref=e424]:
+              - generic [ref=e425]: 🏨
+              - generic [ref=e426]: 숙소
+            - generic [ref=e427]:
+              - paragraph [ref=e429]: 그린델발트 숙소
+              - generic [ref=e430]:
+                - link "🗺️ 지도" [ref=e431] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Grindelwald+3818+Grindelwald+Switzerland
+                - link "🧭 길안내" [ref=e432] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Grindelwald+3818+Grindelwald+Switzerland
+    - navigation [ref=e190]:
+      - list [ref=e191]:
+        - listitem [ref=e192]:
+          - link "🏠 홈" [ref=e193] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e194]: 🏠
+            - generic [ref=e195]: 홈
+        - listitem [ref=e196]:
+          - link "📅 일정" [ref=e197] [cursor=pointer]:
+            - /url: /itinerary
+            - generic [ref=e198]: 📅
+            - generic [ref=e199]: 일정
+        - listitem [ref=e200]:
+          - link "🗺️ 지도" [ref=e201] [cursor=pointer]:
+            - /url: /map
+            - generic [ref=e202]: 🗺️
+            - generic [ref=e203]: 지도
+        - listitem [ref=e204]:
+          - link "💰 경비" [ref=e205] [cursor=pointer]:
+            - /url: /expenses
+            - generic [ref=e206]: 💰
+            - generic [ref=e207]: 경비
+        - listitem [ref=e208]:
+          - link "ℹ️ 비상" [ref=e209] [cursor=pointer]:
+            - /url: /info
+            - generic [ref=e210]: ℹ️
+            - generic [ref=e211]: 비상
+  - button "Open Next.js Dev Tools" [ref=e10] [cursor=pointer]:
+    - img [ref=e11]
+  - alert [ref=e14]

@@ -1,0 +1,174 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - main [ref=e15]:
+      - generic [ref=e335]:
+        - generic [ref=e336]:
+          - heading "ℹ️ 비상정보" [level=1] [ref=e337]
+          - paragraph [ref=e338]: 긴급 상황 시 필요한 모든 정보
+        - link "🚨 SOS 긴급전화 유럽 통합 긴급번호 112" [ref=e339] [cursor=pointer]:
+          - /url: tel:112
+          - generic [ref=e340]: 🚨
+          - generic [ref=e341]:
+            - generic [ref=e342]: SOS 긴급전화
+            - generic [ref=e343]: 유럽 통합 긴급번호 112
+        - generic [ref=e344]:
+          - heading "📞 긴급 연락처" [level=2] [ref=e345]
+          - generic [ref=e346]:
+            - button "🇨🇭 스위스" [ref=e347]
+            - button "🇮🇹 이탈리아" [ref=e348]
+            - button "✈ 공통" [ref=e349]
+          - generic [ref=e350]:
+            - link "통합 긴급번호 유럽 공통 긴급번호 112" [ref=e351] [cursor=pointer]:
+              - /url: tel:112
+              - generic [ref=e352]:
+                - generic [ref=e353]: 통합 긴급번호
+                - generic [ref=e354]: 유럽 공통 긴급번호
+              - generic [ref=e355]: "112"
+            - link "경찰 117" [ref=e356] [cursor=pointer]:
+              - /url: tel:117
+              - generic [ref=e358]: 경찰
+              - generic [ref=e359]: "117"
+            - link "구급/응급 144" [ref=e360] [cursor=pointer]:
+              - /url: tel:144
+              - generic [ref=e362]: 구급/응급
+              - generic [ref=e363]: "144"
+            - link "소방 118" [ref=e364] [cursor=pointer]:
+              - /url: tel:118
+              - generic [ref=e366]: 소방
+              - generic [ref=e367]: "118"
+        - generic [ref=e368]:
+          - heading "🏨 오늘 숙소" [level=2] [ref=e369]
+          - generic [ref=e370]:
+            - generic [ref=e371]: 여행 시작 전입니다. 첫째 날 숙소 정보를 표시합니다.
+            - generic [ref=e372]:
+              - generic [ref=e373]: 🏔
+              - generic [ref=e374]:
+                - generic [ref=e375]: Day 1 · 취리히
+                - paragraph [ref=e376]: Zurich Marriott Hotel
+                - paragraph [ref=e377]: Neumühlequai 42, 8006 Zürich
+            - generic [ref=e378]:
+              - generic [ref=e379]:
+                - paragraph [ref=e380]: 체크인
+                - paragraph [ref=e381]: 15:00
+              - generic [ref=e382]:
+                - paragraph [ref=e383]: 체크아웃
+                - paragraph [ref=e384]: 11:00
+            - generic [ref=e385]:
+              - link "📞 전화" [ref=e386] [cursor=pointer]:
+                - /url: tel:+41443607070
+              - link "🗺️ 지도" [ref=e387] [cursor=pointer]:
+                - /url: https://maps.google.com/?q=Zurich+Marriott+Hotel+Neumühlequai+42+Zürich
+        - generic [ref=e388]:
+          - heading "✈️ 항공편" [level=2] [ref=e389]
+          - generic [ref=e390]:
+            - generic [ref=e391]:
+              - generic [ref=e392]:
+                - generic [ref=e393]: 출발
+                - generic [ref=e394]: "예약번호: FLTZFS"
+              - generic [ref=e395]:
+                - generic [ref=e396]:
+                  - generic [ref=e397]: ICN
+                  - generic [ref=e398]: 인천
+                - generic [ref=e399]:
+                  - generic [ref=e400]: KE917
+                  - generic [ref=e402]: 2026.10.08 (목)
+                - generic [ref=e403]:
+                  - generic [ref=e404]: ZRH
+                  - generic [ref=e405]: 취리히
+              - paragraph [ref=e406]: 12:25 출발
+            - generic [ref=e407]:
+              - generic [ref=e408]:
+                - generic [ref=e409]: 귀국
+                - generic [ref=e410]: "예약번호: FLTZFS"
+              - generic [ref=e411]:
+                - generic [ref=e412]:
+                  - generic [ref=e413]: FCO
+                  - generic [ref=e414]: 로마
+                - generic [ref=e415]:
+                  - generic [ref=e416]: KE932
+                  - generic [ref=e418]: 2026.10.19 (월)
+                - generic [ref=e419]:
+                  - generic [ref=e420]: ICN
+                  - generic [ref=e421]: 인천
+              - paragraph [ref=e422]: 21:25 출발
+        - generic [ref=e423]:
+          - heading "💡 여행 팁" [level=2] [ref=e424]
+          - generic [ref=e425]:
+            - generic [ref=e426]:
+              - paragraph [ref=e427]: 🔌 전압/플러그
+              - list [ref=e428]:
+                - listitem [ref=e429]:
+                  - text: "스위스: 230V / 50Hz,"
+                  - strong [ref=e430]: C타입
+                  - text: (J타입 전용, C타입 호환)
+                - listitem [ref=e431]:
+                  - text: "이탈리아: 230V / 50Hz,"
+                  - strong [ref=e432]: C / F타입
+                - listitem [ref=e433]: 한국 2핀 어댑터(C타입) 하나면 양국 모두 사용 가능
+            - generic [ref=e434]:
+              - paragraph [ref=e435]: 💶 팁 문화
+              - list [ref=e436]:
+                - listitem [ref=e437]: "스위스: 서비스 요금 포함, 팁 의무 아님 (거스름돈 올림 정도)"
+                - listitem [ref=e438]: "이탈리아: Coperto(좌석료) 1~3유로 별도, 팁은 선택"
+                - listitem [ref=e439]: "택시: 요금 반올림 정도, 큰 팁 불필요"
+            - generic [ref=e440]:
+              - paragraph [ref=e441]: 🗣️ 기본 회화
+              - generic [ref=e442]:
+                - generic [ref=e443]:
+                  - paragraph [ref=e444]: 🇩🇪 독일어 (스위스)
+                  - paragraph [ref=e445]:
+                    - text: "안녕하세요:"
+                    - strong [ref=e446]: Grüezi
+                  - paragraph [ref=e447]:
+                    - text: "감사합니다:"
+                    - strong [ref=e448]: Danke
+                  - paragraph [ref=e449]:
+                    - text: "실례합니다:"
+                    - strong [ref=e450]: Entschuldigung
+                  - paragraph [ref=e451]:
+                    - text: "계산서 주세요:"
+                    - strong [ref=e452]: Die Rechnung, bitte
+                - generic [ref=e453]:
+                  - paragraph [ref=e454]: 🇮🇹 이탈리아어
+                  - paragraph [ref=e455]:
+                    - text: "안녕하세요:"
+                    - strong [ref=e456]: Buongiorno
+                  - paragraph [ref=e457]:
+                    - text: "감사합니다:"
+                    - strong [ref=e458]: Grazie
+                  - paragraph [ref=e459]:
+                    - text: "실례합니다:"
+                    - strong [ref=e460]: Scusi
+                  - paragraph [ref=e461]:
+                    - text: "계산서 주세요:"
+                    - strong [ref=e462]: Il conto, per favore
+    - navigation [ref=e68]:
+      - list [ref=e69]:
+        - listitem [ref=e70]:
+          - link "🏠 홈" [ref=e71] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e72]: 🏠
+            - generic [ref=e73]: 홈
+        - listitem [ref=e74]:
+          - link "📅 일정" [ref=e75] [cursor=pointer]:
+            - /url: /itinerary
+            - generic [ref=e76]: 📅
+            - generic [ref=e77]: 일정
+        - listitem [ref=e78]:
+          - link "🗺️ 지도" [ref=e79] [cursor=pointer]:
+            - /url: /map
+            - generic [ref=e80]: 🗺️
+            - generic [ref=e81]: 지도
+        - listitem [ref=e82]:
+          - link "💰 경비" [ref=e83] [cursor=pointer]:
+            - /url: /expenses
+            - generic [ref=e84]: 💰
+            - generic [ref=e85]: 경비
+        - listitem [ref=e86]:
+          - link "ℹ️ 비상" [active] [ref=e87] [cursor=pointer]:
+            - /url: /info
+            - generic [ref=e88]: ℹ️
+            - generic [ref=e89]: 비상
+  - button "Open Next.js Dev Tools" [ref=e10] [cursor=pointer]:
+    - img [ref=e11]
+  - alert [ref=e14]

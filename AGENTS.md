@@ -12,7 +12,7 @@
 | 2차 목표 | 개인용 검증 후 상용화 검토 |
 | 앱 형태 | PWA (Progressive Web App) |
 | 기술 스택 | Next.js 16.2.1 (React) + TypeScript / Express + SQLite |
-| 배포 | Vercel (프론트/SSR) + Oracle Cloud VM (백엔드 API / n8n) |
+| 배포 | Vercel (프론트/SSR) + Oracle Cloud VM 144.24.69.214 (백엔드 API / n8n) |
 
 ## 2. 역할 분담
 

@@ -1,0 +1,149 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - main [ref=e15]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - heading "📅 일정" [level=1] [ref=e92]
+          - paragraph [ref=e93]: 11박 12일 스위스 · 이탈리아
+        - generic [ref=e94]:
+          - button "Day 1 취리히" [ref=e95]:
+            - generic [ref=e96]: Day
+            - generic [ref=e97]: "1"
+            - generic [ref=e98]: 취리히
+          - button "Day 2 베른→그린델발트" [ref=e99]:
+            - generic [ref=e100]: Day
+            - generic [ref=e101]: "2"
+            - generic [ref=e102]: 베른→그린델발트
+          - button "Day 3 그린델발트" [ref=e103]:
+            - generic [ref=e104]: Day
+            - generic [ref=e105]: "3"
+            - generic [ref=e106]: 그린델발트
+          - button "Day 4 그린델발트" [ref=e107]:
+            - generic [ref=e108]: Day
+            - generic [ref=e109]: "4"
+            - generic [ref=e110]: 그린델발트
+          - button "Day 5 체르마트" [ref=e111]:
+            - generic [ref=e112]: Day
+            - generic [ref=e113]: "5"
+            - generic [ref=e114]: 체르마트
+          - button "Day 6 체르마트" [ref=e115]:
+            - generic [ref=e116]: Day
+            - generic [ref=e117]: "6"
+            - generic [ref=e118]: 체르마트
+          - button "Day 7 ⚠ 밀라노 경유→피렌체" [ref=e119]:
+            - generic [ref=e120]: Day
+            - generic [ref=e121]: 7 ⚠
+            - generic [ref=e122]: 밀라노 경유→피렌체
+          - button "Day 8 피렌체" [ref=e123]:
+            - generic [ref=e124]: Day
+            - generic [ref=e125]: "8"
+            - generic [ref=e126]: 피렌체
+          - button "Day 9 피렌체" [ref=e127]:
+            - generic [ref=e128]: Day
+            - generic [ref=e129]: "9"
+            - generic [ref=e130]: 피렌체
+          - button "Day 10 로마" [ref=e131]:
+            - generic [ref=e132]: Day
+            - generic [ref=e133]: "10"
+            - generic [ref=e134]: 로마
+          - button "Day 11 로마" [ref=e135]:
+            - generic [ref=e136]: Day
+            - generic [ref=e137]: "11"
+            - generic [ref=e138]: 로마
+          - button "Day 12 로마→귀국" [ref=e139]:
+            - generic [ref=e140]: Day
+            - generic [ref=e141]: "12"
+            - generic [ref=e142]: 로마→귀국
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - paragraph [ref=e146]: Day 1 - 도착 · 시차 적응
+              - paragraph [ref=e147]: 2026-10-08 · 취리히
+            - generic [ref=e148]: 도착 · 시차 적응
+          - paragraph [ref=e149]: 🏨 취리히 시내 호텔
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - generic [ref=e152]:
+              - generic [ref=e153]: 🚂
+              - generic [ref=e154]: 교통
+            - generic [ref=e155]:
+              - paragraph [ref=e157]: 취리히 국제공항
+              - generic [ref=e158]:
+                - link "🗺️ 지도" [ref=e159] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Zurich+Airport+(ZRH)+Kloten+8058+Zurich+Switzerland
+                - link "🧭 길안내" [ref=e160] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Zurich+Airport+(ZRH)+Kloten+8058+Zurich+Switzerland
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - generic [ref=e163]: 📍
+              - generic [ref=e164]: 관광
+            - generic [ref=e165]:
+              - paragraph [ref=e167]: 취리히 그로스뮌스터
+              - generic [ref=e168]:
+                - link "🗺️ 지도" [ref=e169] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Grossmünster+Grossmünsterplatz+8001+Zurich+Switzerland
+                - link "🧭 길안내" [ref=e170] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Grossmünster+Grossmünsterplatz+8001+Zurich+Switzerland
+          - generic [ref=e171]:
+            - generic [ref=e172]:
+              - generic [ref=e173]: 📍
+              - generic [ref=e174]: 관광
+            - generic [ref=e175]:
+              - paragraph [ref=e177]: 취리히 프라우뮌스터
+              - generic [ref=e178]:
+                - link "🗺️ 지도" [ref=e179] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Fraumünster+Münsterhof+2+8001+Zurich+Switzerland
+                - link "🧭 길안내" [ref=e180] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Fraumünster+Münsterhof+2+8001+Zurich+Switzerland
+          - generic [ref=e181]:
+            - generic [ref=e182]:
+              - generic [ref=e183]: 📍
+              - generic [ref=e184]: 관광
+            - generic [ref=e185]:
+              - paragraph [ref=e187]: 취리히 린트마트 강변
+              - generic [ref=e188]:
+                - link "🗺️ 지도" [ref=e189] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Limmatquai+8001+Zurich+Switzerland
+                - link "🧭 길안내" [ref=e190] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Limmatquai+8001+Zurich+Switzerland
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - generic [ref=e193]: 🏨
+              - generic [ref=e194]: 숙소
+            - generic [ref=e195]:
+              - paragraph [ref=e197]: 취리히 구시가 숙소
+              - generic [ref=e198]:
+                - link "🗺️ 지도" [ref=e199] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=Zurich+City+Center+8001+Zurich+Switzerland
+                - link "🧭 길안내" [ref=e200] [cursor=pointer]:
+                  - /url: https://maps.google.com/dir/?api=1&destination=Zurich+City+Center+8001+Zurich+Switzerland
+    - navigation [ref=e68]:
+      - list [ref=e69]:
+        - listitem [ref=e70]:
+          - link "🏠 홈" [ref=e71] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e72]: 🏠
+            - generic [ref=e73]: 홈
+        - listitem [ref=e74]:
+          - link "📅 일정" [active] [ref=e75] [cursor=pointer]:
+            - /url: /itinerary
+            - generic [ref=e76]: 📅
+            - generic [ref=e77]: 일정
+        - listitem [ref=e78]:
+          - link "🗺️ 지도" [ref=e79] [cursor=pointer]:
+            - /url: /map
+            - generic [ref=e80]: 🗺️
+            - generic [ref=e81]: 지도
+        - listitem [ref=e82]:
+          - link "💰 경비" [ref=e83] [cursor=pointer]:
+            - /url: /expenses
+            - generic [ref=e84]: 💰
+            - generic [ref=e85]: 경비
+        - listitem [ref=e86]:
+          - link "ℹ️ 비상" [ref=e87] [cursor=pointer]:
+            - /url: /info
+            - generic [ref=e88]: ℹ️
+            - generic [ref=e89]: 비상
+  - button "Open Next.js Dev Tools" [ref=e10] [cursor=pointer]:
+    - img [ref=e11]
+  - alert [ref=e14]

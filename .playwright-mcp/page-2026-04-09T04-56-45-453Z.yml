@@ -1,0 +1,110 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - main [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e18]:
+          - heading "💰 경비" [level=1] [ref=e19]
+          - paragraph [ref=e20]: 가족 여행 경비 관리
+        - generic [ref=e21]:
+          - button "오늘" [ref=e22]
+          - button "전체" [ref=e23]
+          - button "정산" [ref=e24]
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - paragraph [ref=e28]: 2026-04-09
+            - paragraph [ref=e29]: ₩0
+          - generic [ref=e30]:
+            - paragraph [ref=e31]: 💰
+            - paragraph [ref=e32]: 오늘 아직 지출이 없어요
+        - button "지출 추가" [active] [ref=e33]: +
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - heading "➕ 지출 추가" [level=2] [ref=e59]
+            - button "닫기" [ref=e60]: ✕
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - generic [ref=e63]: 금액
+              - generic [ref=e64]:
+                - spinbutton [ref=e65]
+                - generic [ref=e66]:
+                  - button "CHF" [ref=e67]
+                  - button "EUR" [ref=e68]
+                  - button "KRW" [ref=e69]
+            - generic [ref=e70]:
+              - generic [ref=e71]: 카테고리
+              - generic [ref=e72]:
+                - button "🍽️ 식사" [ref=e73]:
+                  - generic [ref=e74]: 🍽️
+                  - generic [ref=e75]: 식사
+                - button "🚂 교통" [ref=e76]:
+                  - generic [ref=e77]: 🚂
+                  - generic [ref=e78]: 교통
+                - button "⛰️ 액티비티" [ref=e79]:
+                  - generic [ref=e80]: ⛰️
+                  - generic [ref=e81]: 액티비티
+                - button "🛍️ 쇼핑" [ref=e82]:
+                  - generic [ref=e83]: 🛍️
+                  - generic [ref=e84]: 쇼핑
+                - button "🏨 숙소" [ref=e85]:
+                  - generic [ref=e86]: 🏨
+                  - generic [ref=e87]: 숙소
+                - button "📦 기타" [ref=e88]:
+                  - generic [ref=e89]: 📦
+                  - generic [ref=e90]: 기타
+            - generic [ref=e91]:
+              - generic [ref=e92]: 설명
+              - 'textbox "예: 점심 파스타, 기차표..." [ref=e93]'
+            - generic [ref=e94]:
+              - generic [ref=e95]: 결제자
+              - generic [ref=e96]:
+                - button "👨 진형" [ref=e97]:
+                  - generic [ref=e98]: 👨
+                  - generic [ref=e99]: 진형
+                - button "👩 지현" [ref=e100]:
+                  - generic [ref=e101]: 👩
+                  - generic [ref=e102]: 지현
+                - button "👦 동우" [ref=e103]:
+                  - generic [ref=e104]: 👦
+                  - generic [ref=e105]: 동우
+                - button "👧 유진" [ref=e106]:
+                  - generic [ref=e107]: 👧
+                  - generic [ref=e108]: 유진
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - generic [ref=e111]: 날짜
+                - textbox [ref=e112]: 2026-04-09
+              - generic [ref=e113]:
+                - generic [ref=e114]: 시간
+                - textbox [ref=e115]: 13:56
+            - paragraph [ref=e117]: 👥 4인 균등 분할 (기본)
+            - button "저장" [ref=e118]
+    - navigation [ref=e34]:
+      - list [ref=e35]:
+        - listitem [ref=e36]:
+          - link "🏠 홈" [ref=e37] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e38]: 🏠
+            - generic [ref=e39]: 홈
+        - listitem [ref=e40]:
+          - link "📅 일정" [ref=e41] [cursor=pointer]:
+            - /url: /itinerary
+            - generic [ref=e42]: 📅
+            - generic [ref=e43]: 일정
+        - listitem [ref=e44]:
+          - link "🗺️ 지도" [ref=e45] [cursor=pointer]:
+            - /url: /map
+            - generic [ref=e46]: 🗺️
+            - generic [ref=e47]: 지도
+        - listitem [ref=e48]:
+          - link "💰 경비" [ref=e49] [cursor=pointer]:
+            - /url: /expenses
+            - generic [ref=e50]: 💰
+            - generic [ref=e51]: 경비
+        - listitem [ref=e52]:
+          - link "ℹ️ 비상" [ref=e53] [cursor=pointer]:
+            - /url: /info
+            - generic [ref=e54]: ℹ️
+            - generic [ref=e55]: 비상
+  - button "Open Next.js Dev Tools" [ref=e10] [cursor=pointer]:
+    - img [ref=e11]
+  - alert [ref=e14]
