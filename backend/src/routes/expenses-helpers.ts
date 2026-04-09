@@ -33,10 +33,16 @@ export interface ExpenseResponse {
   updatedAt: string;
 }
 
+export interface PayerSummary {
+  name: string;
+  emoji: string;
+  totalKrw: number;
+}
+
 export interface ExpenseSummary {
   totalKrw: number;
   byCategory: Record<string, number>;
-  byPayer: Record<string, number>;
+  byPayer: PayerSummary[];
   byDate: Record<string, number>;
   count: number;
 }
@@ -171,6 +177,14 @@ export function getMemberStringId(tripId: number, dbId: number): string {
     if (val === dbId && key.startsWith('member-')) return key;
   }
   return String(dbId);
+}
+
+/** 멤버 DB id → 표시용 이름 (진형, 지현 등) */
+export function getMemberName(tripId: number, dbId: number): string {
+  const db = getDb();
+  const row = db.prepare('SELECT name FROM members WHERE trip_id = ? AND id = ?')
+    .get(tripId, dbId) as { name: string } | undefined;
+  return row?.name ?? String(dbId);
 }
 
 /** 환율 조회: 해당 날짜 → 최근 환율 → 기본값 순서 */

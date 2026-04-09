@@ -9,7 +9,7 @@ const CATEGORY_META: Record<
   ExpenseCategory,
   { icon: string; label: string; color: string }
 > = {
-  meal: { icon: '\u{1F37D}\uFE0F', label: '식사', color: '#C8552A' },
+  food: { icon: '\u{1F37D}\uFE0F', label: '식사', color: '#C8552A' },
   transport: { icon: '\u{1F682}', label: '교통', color: '#6B7B3A' },
   activity: { icon: '\u26F0\uFE0F', label: '액티비티', color: '#D4A017' },
   shopping: { icon: '\u{1F6CD}\uFE0F', label: '쇼핑', color: '#8B5CF6' },

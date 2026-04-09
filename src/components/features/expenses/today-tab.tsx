@@ -6,7 +6,7 @@ import type { Expense, ExpenseCategory } from '@/types';
 
 // 카테고리별 아이콘·레이블
 const CATEGORY_META: Record<ExpenseCategory, { icon: string; label: string }> = {
-  meal: { icon: '\u{1F37D}\uFE0F', label: '식사' },
+  food: { icon: '\u{1F37D}\uFE0F', label: '식사' },
   transport: { icon: '\u{1F682}', label: '교통' },
   activity: { icon: '\u26F0\uFE0F', label: '액티비티' },
   shopping: { icon: '\u{1F6CD}\uFE0F', label: '쇼핑' },

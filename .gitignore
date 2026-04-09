@@ -56,6 +56,13 @@ next-env.d.ts
 # IDE 및 Claude Code 로컬 설정
 .vscode/settings.json
 .claude/settings.local.json
+.claude/settings.json
+
+# Playwright MCP 로컬 테스트 파일
+.playwright-mcp/
+
+# 미리보기 스크린샷
+preview-*.png
 
 # next-pwa 자동 생성 파일 (빌드 시 생성됨)
 public/sw.js
