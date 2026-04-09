@@ -7,6 +7,7 @@ import express from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
 import morgan from 'morgan';
+import cookieParser from 'cookie-parser';
 
 import apiRouter from './routes';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
@@ -30,6 +31,10 @@ app.use(
     allowedHeaders: ['Content-Type', 'Authorization'],
   }),
 );
+
+// ── 쿠키 파싱 ──────────────────────────────────────────────
+// httpOnly cookie 기반 JWT 인증에 필요
+app.use(cookieParser());
 
 // ── 요청 파싱 ───────────────────────────────────────────────
 app.use(express.json({ limit: '1mb' }));
