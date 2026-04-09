@@ -70,3 +70,7 @@ public/sw.js.map
 public/workbox-*.js
 public/workbox-*.js.map
 .env*.local
+
+# Playwright 테스트 결과 (로컬 전용)
+playwright-report/
+test-results/

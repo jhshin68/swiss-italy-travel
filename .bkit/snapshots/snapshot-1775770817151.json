@@ -1,0 +1,969 @@
+{
+  "timestamp": "2026-04-09T21:40:17.149Z",
+  "reason": "compaction",
+  "status": {
+    "version": "2.0",
+    "lastUpdated": "2026-04-09T21:21:10.641Z",
+    "activeFeatures": [
+      "db",
+      "backend",
+      "middleware",
+      "routes",
+      "travel",
+      "stores",
+      "login",
+      "select-member",
+      "layout",
+      "(app)",
+      "itinerary",
+      "expenses",
+      "info",
+      "map",
+      "missions",
+      "phrasebook",
+      "checklist",
+      "tests",
+      "swiss-italy-travel"
+    ],
+    "primaryFeature": "db",
+    "features": {
+      "db": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-29T08:49:17.981Z",
+          "lastUpdated": "2026-04-09T02:47:11.594Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\backend\\src\\db\\seed.ts"
+      },
+      "backend": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-29T08:49:27.066Z",
+          "lastUpdated": "2026-04-09T04:14:42.509Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\backend\\src\\lib\\settlement.ts"
+      },
+      "middleware": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-29T08:49:33.648Z",
+          "lastUpdated": "2026-04-09T02:33:30.289Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\backend\\src\\middleware\\auth.ts"
+      },
+      "routes": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:34:07.972Z",
+          "lastUpdated": "2026-04-09T07:25:12.266Z"
+        },
+        "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\travel\\backend\\src\\routes\\expenses-stats.ts"
+      },
+      "travel": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:39:23.427Z",
+          "lastUpdated": "2026-04-09T04:55:09.461Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\hooks\\use-offline-sync.ts"
+      },
+      "stores": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:39:34.806Z",
+          "lastUpdated": "2026-04-09T02:39:34.806Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\stores\\auth-store.ts"
+      },
+      "login": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:40:03.620Z",
+          "lastUpdated": "2026-04-09T02:40:03.620Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(auth)\\login\\page.tsx"
+      },
+      "select-member": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:40:20.935Z",
+          "lastUpdated": "2026-04-09T02:40:20.935Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(auth)\\select-member\\page.tsx"
+      },
+      "layout": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:56:35.232Z",
+          "lastUpdated": "2026-04-09T13:23:18.647Z"
+        },
+        "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\src\\components\\layout\\bottom-nav.tsx"
+      },
+      "(app)": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:56:43.267Z",
+          "lastUpdated": "2026-04-09T13:23:03.630Z"
+        },
+        "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\src\\app\\(app)\\page.tsx"
+      },
+      "itinerary": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T02:57:37.134Z",
+          "lastUpdated": "2026-04-09T02:58:12.303Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(app)\\itinerary\\page.tsx"
+      },
+      "expenses": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T03:04:59.034Z",
+          "lastUpdated": "2026-04-09T06:41:41.112Z"
+        },
+        "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\components\\features\\expenses\\today-tab.tsx"
+      },
+      "info": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T03:23:15.017Z",
+          "lastUpdated": "2026-04-09T03:24:26.962Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(app)\\info\\page.tsx"
+      },
+      "map": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T03:32:19.699Z",
+          "lastUpdated": "2026-04-09T03:33:00.407Z"
+        },
+        "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(app)\\map\\page.tsx"
+      },
+      "missions": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T13:23:25.373Z",
+          "lastUpdated": "2026-04-09T13:23:25.373Z"
+        },
+        "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\src\\app\\(app)\\missions\\page.tsx"
+      },
+      "phrasebook": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T13:23:31.129Z",
+          "lastUpdated": "2026-04-09T13:23:31.129Z"
+        },
+        "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\src\\app\\(app)\\phrasebook\\page.tsx"
+      },
+      "checklist": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T13:23:37.676Z",
+          "lastUpdated": "2026-04-09T13:23:37.676Z"
+        },
+        "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\src\\app\\(app)\\checklist\\page.tsx"
+      },
+      "tests": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T13:31:38.180Z",
+          "lastUpdated": "2026-04-09T21:21:10.641Z"
+        },
+        "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\tests\\home.spec.ts"
+      },
+      "swiss-italy-travel": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-09T13:31:46.591Z",
+          "lastUpdated": "2026-04-09T21:17:39.143Z"
+        },
+        "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\playwright.config.ts"
+      }
+    },
+    "pipeline": {
+      "currentPhase": 1,
+      "level": "Dynamic",
+      "phaseHistory": []
+    },
+    "session": {
+      "startedAt": "2026-03-29T08:41:25.646Z",
+      "onboardingCompleted": false,
+      "lastActivity": "2026-04-09T21:21:10.641Z"
+    },
+    "history": [
+      {
+        "timestamp": "2026-03-29T08:49:17.981Z",
+        "feature": "db",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-29T08:49:27.066Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-29T08:49:33.648Z",
+        "feature": "middleware",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-29T08:49:36.157Z",
+        "feature": "middleware",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-29T08:49:41.125Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-29T08:49:49.811Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:33:12.425Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:33:30.289Z",
+        "feature": "middleware",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:34:07.972Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:34:15.811Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:34:17.607Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:34:19.892Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:35:36.399Z",
+        "feature": "db",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:39:23.427Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:39:29.575Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:39:34.806Z",
+        "feature": "stores",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:40:03.620Z",
+        "feature": "login",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:40:20.935Z",
+        "feature": "select-member",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:40:32.734Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:40:38.684Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:47:11.594Z",
+        "feature": "db",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:07.579Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:10.268Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:11.583Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:14.091Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:15.838Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:25.023Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:35.232Z",
+        "feature": "layout",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:56:43.267Z",
+        "feature": "(app)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:57:16.166Z",
+        "feature": "(app)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:57:37.134Z",
+        "feature": "itinerary",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:58:12.303Z",
+        "feature": "itinerary",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T02:58:19.917Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:03:57.134Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:04:09.691Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:04:16.058Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:04:26.047Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:04:59.034Z",
+        "feature": "expenses",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:05:13.333Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:05:20.379Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:05:21.212Z",
+        "feature": "expenses",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:05:39.302Z",
+        "feature": "expenses",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:06:03.029Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:06:15.514Z",
+        "feature": "expenses",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:06:30.071Z",
+        "feature": "expenses",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:06:49.171Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:07:18.342Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:07:51.330Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:08:01.391Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:23:15.017Z",
+        "feature": "info",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:23:50.830Z",
+        "feature": "info",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:24:26.962Z",
+        "feature": "info",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:32:19.699Z",
+        "feature": "map",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:32:35.172Z",
+        "feature": "map",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T03:33:00.407Z",
+        "feature": "map",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:07:02.804Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:07:22.533Z",
+        "feature": "layout",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:07:28.690Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:07:30.588Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:07:32.404Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:07:33.911Z",
+        "feature": "(app)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:07:36.209Z",
+        "feature": "(app)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:07:49.767Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:07:53.926Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:08:07.691Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:08:39.394Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:08:57.935Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:09:03.875Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:09:06.098Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:09:11.228Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:09:16.346Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:09:23.308Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:09:47.456Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:14:42.509Z",
+        "feature": "backend",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:22:28.497Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:53:27.658Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:54:47.459Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:54:52.045Z",
+        "feature": "expenses",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:54:55.943Z",
+        "feature": "expenses",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T04:55:09.461Z",
+        "feature": "travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T06:41:22.896Z",
+        "feature": "expenses",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T06:41:41.112Z",
+        "feature": "expenses",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T06:51:42.864Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T06:51:53.630Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T06:51:58.971Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T07:11:40.608Z",
+        "feature": "(app)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T07:15:17.695Z",
+        "feature": "(app)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T07:15:27.213Z",
+        "feature": "(app)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T07:24:55.926Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T07:25:04.406Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T07:25:12.266Z",
+        "feature": "routes",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:23:03.631Z",
+        "feature": "(app)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:23:18.647Z",
+        "feature": "layout",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:23:25.373Z",
+        "feature": "missions",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:23:31.129Z",
+        "feature": "phrasebook",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:23:37.676Z",
+        "feature": "checklist",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:31:38.181Z",
+        "feature": "tests",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:31:46.591Z",
+        "feature": "swiss-italy-travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:32:17.519Z",
+        "feature": "swiss-italy-travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:32:24.900Z",
+        "feature": "swiss-italy-travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:36:35.311Z",
+        "feature": "tests",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:37:20.471Z",
+        "feature": "tests",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:37:26.862Z",
+        "feature": "tests",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:37:32.474Z",
+        "feature": "tests",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:37:37.429Z",
+        "feature": "tests",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T13:41:17.169Z",
+        "feature": "swiss-italy-travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T20:58:35.405Z",
+        "feature": "swiss-italy-travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T20:58:41.587Z",
+        "feature": "swiss-italy-travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T21:01:15.219Z",
+        "feature": "swiss-italy-travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T21:17:39.143Z",
+        "feature": "swiss-italy-travel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T21:20:54.150Z",
+        "feature": "tests",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T21:21:05.773Z",
+        "feature": "tests",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-09T21:21:10.641Z",
+        "feature": "tests",
+        "phase": "do",
+        "action": "updated"
+      }
+    ]
+  }
+}
