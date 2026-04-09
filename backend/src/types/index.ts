@@ -8,11 +8,12 @@ export interface ApiResponse<T = unknown> {
   message?: string;
 }
 
-/** JWT 페이로드 */
+/** JWT 페이로드 — API 레벨에서는 string ID 사용 */
 export interface JwtPayload {
-  tripId: number;
-  memberId: number;
+  tripId: string;
+  memberId: string;       // 'member-jinhyung' | 'member-jihyun' | 'member-dongwoo' | 'member-yujin'
   memberName: string;
+  role: 'admin' | 'member';
   iat?: number;
   exp?: number;
 }
