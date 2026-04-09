@@ -60,6 +60,9 @@ export function calcMinTransfers(balances: BalanceMap): Transfer[] {
 
   const transfers: Transfer[] = [];
 
+  // 정산할 항목이 없으면 빈 배열 반환
+  if (entries.length === 0) return transfers;
+
   // Greedy: 매 반복마다 debtor(음수)와 creditor(양수)를 매칭
   while (true) {
     // 최소값(가장 큰 빚)과 최대값(가장 많이 받을 사람)을 찾는다

@@ -148,21 +148,22 @@ jobs:
           script: |
             set -e
             echo "📦 소스 업데이트..."
-            cd /app/swiss-italy-travel
-            git pull origin main
+            cd ~/swiss-italy-travel
+            git fetch origin main
+            git reset --hard origin/main
 
             echo "📦 백엔드 의존성 설치..."
             cd backend
             npm ci --production=false
 
             echo "🔨 빌드..."
-            npm run build
+            npx tsc
 
             echo "🔄 PM2 재시작..."
-            pm2 restart swiss-italy-api || pm2 start dist/index.js --name swiss-italy-api
+            pm2 restart swiss-travel-api || pm2 start dist/index.js --name swiss-travel-api
 
             echo "✅ 배포 완료"
-            pm2 status swiss-italy-api
+            pm2 status swiss-travel-api
 
       - name: Health check after deploy
         run: |
