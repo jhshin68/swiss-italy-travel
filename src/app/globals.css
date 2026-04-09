@@ -32,3 +32,12 @@ body {
 .animate-shake {
   animation: shake 0.5s ease-in-out;
 }
+
+/* 가로 스크롤 날짜 버튼 등에서 스크롤바 숨기기 */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

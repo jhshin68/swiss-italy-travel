@@ -37,3 +37,38 @@ export interface MemberPreset {
   emoji: string;
   color: string;
 }
+
+// 일정 관련 타입 — 날짜별 일정 요약
+export interface DayPlan {
+  id: number;
+  date: string;
+  title: string;
+  theme: string;
+  country: 'switzerland' | 'italy' | 'transit';
+  city: string;
+  hotel: string;
+  isSpecial: boolean;
+  specialNote: string;
+  spotCount: number;
+}
+
+// 장소 카드 — 각 일정의 세부 장소 정보
+export type SpotCategory = 'transport' | 'sightseeing' | 'meal' | 'hotel' | 'activity';
+
+export interface Spot {
+  id: number;
+  name: string;
+  nameLocal: string;
+  category: SpotCategory;
+  startTime: string;
+  endTime: string;
+  cost: number | null;
+  currency: string;
+  notes: string;
+  mapUrl: string;
+  navUrl: string;
+  bookingRef: string;
+  weatherAlternative: string;
+  sortOrder: number;
+  isImportant: boolean;
+}

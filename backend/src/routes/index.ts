@@ -4,6 +4,7 @@
 import { Router } from 'express';
 import healthRouter from './health';
 import authRouter from './auth';
+import tripsRouter from './trips';
 
 const router = Router();
 
@@ -13,7 +14,7 @@ router.use('/health', healthRouter);
 // POST /api/auth/login, GET /api/auth/me, POST /api/auth/logout
 router.use('/auth', authRouter);
 
-// TODO: 마일스톤 1.3에서 추가 예정
-// router.use('/trips', tripRouter);
+// 일정·장소 조회 API
+router.use('/trips', tripsRouter);
 
 export default router;
