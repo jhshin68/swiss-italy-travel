@@ -14,10 +14,13 @@ const withPWA = require('next-pwa')({
   skipWaiting: true,
   disable: process.env.NODE_ENV === 'development', // 개발 시 비활성화
   runtimeCaching: [
-    // Tier 1: Cache-First (일정 — 변경 빈도 낮은 데이터)
+    // Tier 1: StaleWhileRevalidate (일정 — 오프라인 대응 유지 + 백그라운드 갱신)
+    // 기존 CacheFirst는 앱 업데이트 후에도 구버전 데이터가 계속 남아 Day 변경이 반영되지 않았음.
+    // StaleWhileRevalidate는 즉시 캐시를 반환(오프라인 OK)하면서 동시에 네트워크로 최신을 받아
+    // 다음 요청부터 새 데이터가 노출된다.
     {
       urlPattern: /^https:\/\/slp-travel\.duckdns\.org\/api\/trips\/\d+\/days/,
-      handler: 'CacheFirst',
+      handler: 'StaleWhileRevalidate',
       options: {
         cacheName: 'itinerary-cache',
         expiration: { maxEntries: 50, maxAgeSeconds: 30 * 24 * 60 * 60 },
@@ -25,7 +28,7 @@ const withPWA = require('next-pwa')({
     },
     {
       urlPattern: /^https:\/\/slp-travel\.duckdns\.org\/api\/trips\/\d+\/spots/,
-      handler: 'CacheFirst',
+      handler: 'StaleWhileRevalidate',
       options: {
         cacheName: 'spots-cache',
         expiration: { maxEntries: 200, maxAgeSeconds: 30 * 24 * 60 * 60 },
