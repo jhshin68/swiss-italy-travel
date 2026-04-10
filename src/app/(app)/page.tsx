@@ -3,6 +3,7 @@
 import { useAuthStore } from '@/stores/auth-store';
 import { useMissions } from '@/hooks/use-missions';
 import { WeatherCard } from '@/components/features/weather/weather-card';
+import { CloudSun, MapPin, Plane, Hotel } from 'lucide-react';
 // 여행 기본 정보
 const TRIP_START = new Date('2026-10-08T00:00:00');
 const TRIP_END = new Date('2026-10-19T23:59:59');
@@ -139,8 +140,9 @@ export default function HomePage() {
         <section className="rounded-2xl px-4 py-3 backdrop-blur-md"
           style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
         >
-          <h2 className="mb-2 text-sm font-bold text-stone-700">
-            <span className="mr-1">☀️</span>현재 날씨
+          <h2 className="mb-2 flex items-center gap-1.5 text-sm font-bold text-stone-700">
+            <CloudSun size={16} className="text-amber-500" aria-hidden />
+            현재 날씨
           </h2>
           <WeatherCard />
         </section>
@@ -168,8 +170,9 @@ export default function HomePage() {
         <section className="rounded-2xl px-4 py-4 backdrop-blur-md"
           style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
         >
-          <h2 className="mb-1 text-center text-sm font-bold text-stone-700">
-            <span className="mr-1">📍</span>방문 도장 모으기
+          <h2 className="mb-1 flex items-center justify-center gap-1.5 text-center text-sm font-bold text-stone-700">
+            <MapPin size={16} className="text-rose-500" aria-hidden />
+            방문 도장 모으기
           </h2>
           <p className="mb-3 text-center text-[10px] text-stone-400">
             미션 완료 시 도장이 자동 획득됩니다 ({collectedStamps.size}/{STAMPS.length})
@@ -185,8 +188,9 @@ export default function HomePage() {
         <section className="rounded-2xl px-4 py-4 backdrop-blur-md"
           style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
         >
-          <h2 className="mb-2 text-sm font-bold text-stone-700">
-            <span className="mr-1">✈️</span>항공편
+          <h2 className="mb-2 flex items-center gap-1.5 text-sm font-bold text-stone-700">
+            <Plane size={16} className="text-sky-500" aria-hidden />
+            항공편
           </h2>
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2 rounded-xl bg-white/60 px-3 py-2">
@@ -213,8 +217,9 @@ export default function HomePage() {
         <section className="rounded-2xl px-4 py-4 backdrop-blur-md"
           style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
         >
-          <h2 className="mb-2 text-sm font-bold text-stone-700">
-            <span className="mr-1">🏨</span>숙소 일정
+          <h2 className="mb-2 flex items-center gap-1.5 text-sm font-bold text-stone-700">
+            <Hotel size={16} className="text-emerald-600" aria-hidden />
+            숙소 일정
           </h2>
           <div className="flex flex-col gap-1.5">
             <AccomRow emoji="🇨🇭" city="취리히" nights="1박" days="Day 1" />

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Lightbulb } from 'lucide-react';
 
 type Language = 'german' | 'italian' | 'french' | 'english';
 
@@ -164,8 +165,9 @@ export default function PhrasesPage() {
 
       {/* 꿀팁 섹션 */}
       <section className="mt-6 rounded-2xl bg-amber-50 p-4">
-        <h2 className="mb-3 text-sm font-bold text-amber-800">
-          💡 현지 에티켓 & 꿀팁
+        <h2 className="mb-3 flex items-center gap-1.5 text-sm font-bold text-amber-800">
+          <Lightbulb size={16} aria-hidden />
+          현지 에티켓 & 꿀팁
         </h2>
         <div className="flex flex-col gap-2">
           {TIPS.map((t, i) => (

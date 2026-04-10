@@ -2,21 +2,31 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import {
+  Home,
+  CalendarDays,
+  Wallet,
+  Trophy,
+  MessageCircle,
+  CheckSquare,
+  Siren,
+  type LucideIcon,
+} from 'lucide-react';
 
 interface NavItem {
   href: string;
   label: string;
-  icon: string;
+  Icon: LucideIcon;
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { href: '/', label: '홈', icon: '🏠' },
-  { href: '/itinerary', label: '여정', icon: '📅' },
-  { href: '/expenses', label: '지출', icon: '💰' },
-  { href: '/missions', label: '미션', icon: '🏆' },
-  { href: '/phrases', label: '현지어', icon: '💬' },
-  { href: '/checklist', label: '체크', icon: '✅' },
-  { href: '/info', label: '긴급', icon: '🚨' },
+  { href: '/', label: '홈', Icon: Home },
+  { href: '/itinerary', label: '여정', Icon: CalendarDays },
+  { href: '/expenses', label: '지출', Icon: Wallet },
+  { href: '/missions', label: '미션', Icon: Trophy },
+  { href: '/phrases', label: '현지어', Icon: MessageCircle },
+  { href: '/checklist', label: '체크', Icon: CheckSquare },
+  { href: '/info', label: '긴급', Icon: Siren },
 ];
 
 // 하단 탭 네비게이션 — 7개 메인 섹션으로 이동
@@ -36,6 +46,8 @@ export function BottomNav() {
               ? pathname === '/'
               : pathname.startsWith(item.href);
 
+          const { Icon } = item;
+
           return (
             <li key={item.href} className="flex-1">
               <Link
@@ -46,7 +58,11 @@ export function BottomNav() {
                     : 'text-[var(--color-text)]/50 hover:text-[var(--color-text)]/80'
                 }`}
               >
-                <span className="text-xl leading-none">{item.icon}</span>
+                <Icon
+                  size={20}
+                  strokeWidth={isActive ? 2.4 : 2}
+                  aria-hidden
+                />
                 <span className="truncate">{item.label}</span>
                 {/* 활성 탭 dot indicator — invisible로 레이아웃 고정 유지 */}
                 <span

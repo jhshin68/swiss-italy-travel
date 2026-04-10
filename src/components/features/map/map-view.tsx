@@ -11,6 +11,14 @@ import {
 } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import {
+  Train,
+  Landmark,
+  Utensils,
+  BedDouble,
+  Mountain,
+  type LucideIcon,
+} from 'lucide-react';
 import type { DaySchedule, ScheduleItem } from '@/data/itinerary';
 
 // Leaflet 기본 마커 아이콘 경로 수정 (Next.js에서 깨지는 문제 해결)
@@ -54,13 +62,13 @@ const ROUTE_COORDS: [number, number][] = [
   [41.9028, 12.4964],
 ];
 
-// 카테고리별 아이콘 매핑
-const CATEGORY_ICONS: Record<ScheduleItem['type'], string> = {
-  transport: '🚂',
-  sightseeing: '🏛',
-  meal: '🍽',
-  hotel: '🏨',
-  activity: '⛰️',
+// 카테고리별 아이콘 매핑 — Lucide 아이콘 컴포넌트
+const CATEGORY_ICONS: Record<ScheduleItem['type'], LucideIcon> = {
+  transport: Train,
+  sightseeing: Landmark,
+  meal: Utensils,
+  hotel: BedDouble,
+  activity: Mountain,
 };
 
 // Day 변경 시 지도 이동을 처리하는 내부 컴포넌트
@@ -152,7 +160,9 @@ export function MapView({ selectedDay, showAllRoute }: MapViewProps) {
                   Day {selectedDay.day} &middot; {selectedDay.theme}
                 </span>
                 <hr style={{ margin: '6px 0', borderColor: '#eee' }} />
-                {selectedDay.items.map((item, idx) => (
+                {selectedDay.items.map((item, idx) => {
+                  const ItemIcon = CATEGORY_ICONS[item.type];
+                  return (
                   <div
                     key={idx}
                     style={{
@@ -162,7 +172,7 @@ export function MapView({ selectedDay, showAllRoute }: MapViewProps) {
                       gap: '4px',
                     }}
                   >
-                    <span>{CATEGORY_ICONS[item.type]}</span>
+                    <ItemIcon size={14} aria-hidden style={{ flexShrink: 0, marginTop: '2px' }} />
                     <span>
                       {item.mapUrl ? (
                         <a
@@ -178,7 +188,8 @@ export function MapView({ selectedDay, showAllRoute }: MapViewProps) {
                       )}
                     </span>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             </Popup>
           </Marker>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
+import { Phone, Map as MapIcon } from 'lucide-react';
 import ITINERARY from '@/data/itinerary';
 
 // 호텔 상세 정보 — 도시명을 키로 매핑
@@ -194,17 +195,19 @@ export function HotelCard() {
             <div className="mt-3 flex gap-2">
               <a
                 href={toTelHref(hotel.phone)}
-                className="flex min-h-[40px] flex-1 items-center justify-center gap-1 rounded-lg bg-[var(--color-primary)] text-xs font-medium text-white transition-opacity active:opacity-80"
+                className="flex min-h-[40px] flex-1 items-center justify-center gap-1.5 rounded-lg bg-[var(--color-primary)] text-xs font-medium text-white transition-opacity active:opacity-80"
               >
-                📞 전화
+                <Phone size={14} aria-hidden />
+                전화
               </a>
               <a
-                href={`https://maps.google.com/?q=${hotel.mapQuery}`}
+                href={`https://www.google.com/maps/?q=${hotel.mapQuery}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-[40px] flex-1 items-center justify-center gap-1 rounded-lg bg-[var(--color-secondary)] text-xs font-medium text-white transition-opacity active:opacity-80"
+                className="flex min-h-[40px] flex-1 items-center justify-center gap-1.5 rounded-lg bg-[var(--color-secondary)] text-xs font-medium text-white transition-opacity active:opacity-80"
               >
-                🗺️ 지도
+                <MapIcon size={14} aria-hidden />
+                지도
               </a>
             </div>
           </>
