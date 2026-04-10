@@ -6,6 +6,7 @@ import { useAuthStore } from '@/stores/auth-store';
 import { BottomNav } from '@/components/layout/bottom-nav';
 import { OfflineBanner } from '@/components/layout/offline-banner';
 import { UpdatePrompt } from '@/components/layout/update-prompt';
+import { InstallPrompt } from '@/components/layout/install-prompt';
 
 // 인증된 사용자 전용 레이아웃 — 미인증 시 /login으로 리다이렉트
 export default function AppLayout({
@@ -47,6 +48,8 @@ export default function AppLayout({
       <main className="flex-1 overflow-y-auto pb-16">
         {children}
       </main>
+      {/* InstallPrompt(z-55)는 BottomNav 위·OfflineBanner 아래에 위치 — 설치 유도 */}
+      <InstallPrompt />
       <BottomNav />
     </div>
   );
