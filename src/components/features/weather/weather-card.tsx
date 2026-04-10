@@ -157,17 +157,17 @@ export function WeatherCard() {
           </div>
         </div>
 
-        {/* 내일·모레 — 오른쪽에 나란히 */}
+        {/* 내일·모레 — 오른쪽에 나란히 (1.5배 크기) */}
         {data.daily.slice(1).map((day, i) => (
-          <div key={day.date} className="flex flex-col items-center border-l border-stone-200 px-2">
-            <span className="text-[10px] text-stone-500">{getDayLabel(day.date, i + 1)}</span>
-            <span className="my-0.5 text-xl">{day.emoji}</span>
+          <div key={day.date} className="flex flex-col items-center border-l border-stone-200 px-3">
+            <span className="text-xs text-stone-500">{getDayLabel(day.date, i + 1)}</span>
+            <span className="my-0.5 text-3xl">{day.emoji}</span>
             <div className="flex items-baseline gap-0.5">
-              <span className="text-sm font-bold text-stone-700">{day.tempMax}°</span>
-              <span className="text-[9px] text-stone-400">/{day.tempMin}°</span>
+              <span className="text-lg font-bold text-stone-700">{day.tempMax}°</span>
+              <span className="text-xs text-stone-400">/{day.tempMin}°</span>
             </div>
             {day.precipProb > 0 && (
-              <span className={`text-[9px] ${day.precipProb >= 70 ? 'font-bold text-blue-600' : 'text-blue-400'}`}>
+              <span className={`text-xs ${day.precipProb >= 70 ? 'font-bold text-blue-600' : 'text-blue-400'}`}>
                 💧{day.precipProb}%
               </span>
             )}
