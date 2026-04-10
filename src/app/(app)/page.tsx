@@ -89,25 +89,38 @@ export default function HomePage() {
       </div>
 
       <div className="relative flex flex-col gap-4 px-4 pb-24 pt-6">
-        {/* 타이틀 */}
+        {/* 타이틀 — 여백 + 레터스페이싱으로 여행 포스터 느낌 */}
         <section className="text-center">
-          <p className="text-sm font-medium text-stone-600 drop-shadow-sm">CH + IT</p>
-          <h1 className="text-2xl font-black text-stone-800 drop-shadow-sm">
-            우리 가족 <span className="text-amber-600">대탐험!</span>
-          </h1>
-          <p className="text-sm text-stone-600 drop-shadow-sm">
-            스위스 &middot; 이탈리아 &middot; 12일 여행
+          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-amber-700/80 drop-shadow-sm">
+            CH &middot; IT &middot; 2026
           </p>
+          <h1 className="mt-1 text-3xl font-black leading-tight text-stone-800 drop-shadow-sm">
+            우리 가족{' '}
+            <span className="bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">
+              대탐험!
+            </span>
+          </h1>
+          <div className="mx-auto mt-1.5 flex items-center justify-center gap-2 text-xs text-stone-600 drop-shadow-sm">
+            <span className="h-px w-6 bg-stone-400/50" />
+            <span>스위스 &middot; 이탈리아 &middot; 12일</span>
+            <span className="h-px w-6 bg-stone-400/50" />
+          </div>
         </section>
 
-        {/* D-Day 카드 (나무간판 스타일) — rounded-2xl(16px) + 강화된 shadow */}
+        {/* D-Day 카드 (나무간판 스타일) — rounded-2xl + 강화된 shadow + phase 링 */}
         <section
-          className="mx-auto flex w-full max-w-sm overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5"
-          style={{ backgroundColor: 'rgba(255,253,245,0.92)' }}
+          className={`mx-auto flex w-full max-w-sm overflow-hidden rounded-2xl shadow-xl ring-2 ${
+            phase === 'before'
+              ? 'ring-amber-300/60'
+              : phase === 'during'
+              ? 'ring-emerald-400/60'
+              : 'ring-stone-300/60'
+          }`}
+          style={{ backgroundColor: 'rgba(255,253,245,0.94)' }}
         >
           {/* 왼쪽: D-day 나무간판 — wooden-sign 클래스가 나무결 + 못 장식 담당 (globals.css) */}
-          <div className="wooden-sign flex flex-col items-center justify-center px-5 py-4">
-            <span className="text-xs font-bold text-amber-100 drop-shadow">
+          <div className="wooden-sign relative flex flex-col items-center justify-center px-5 py-4">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-amber-100 drop-shadow">
               {phase === 'before' ? '출발까지' : phase === 'during' ? '여행중' : '완료!'}
             </span>
             <span className="text-4xl font-black text-white drop-shadow-md">
@@ -121,57 +134,72 @@ export default function HomePage() {
               {phase === 'before' ? '대탐험 준비 중!' : phase === 'during' ? '대탐험 진행 중!' : '대탐험 완료!'}
             </p>
             <p className="text-xs text-stone-500">2026년 10월 8일 출발</p>
-            {/* 진행률 바 */}
-            <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-stone-200">
+            {/* 진행률 바 — phase별 색상 */}
+            <div className="mt-1.5 h-2.5 w-full overflow-hidden rounded-full bg-stone-200/80 shadow-inner">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-green-400 to-green-600 transition-all"
+                className={`h-full rounded-full transition-all ${
+                  phase === 'before'
+                    ? 'bg-gradient-to-r from-amber-300 to-amber-500'
+                    : phase === 'during'
+                    ? 'bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-600'
+                    : 'bg-gradient-to-r from-stone-400 to-stone-600'
+                }`}
                 style={{
                   width: phase === 'before' ? '5%' : phase === 'after' ? '100%' : `${(dayNumber / 12) * 100}%`,
                 }}
               />
             </div>
-            <p className="text-[10px] text-stone-400">
-              11박 12일 &middot; 취리리&rarr;그린델발트&rarr;체르마트&rarr;피렌체&rarr;로마
+            <p className="mt-0.5 text-[10px] text-stone-400">
+              11박 12일 &middot; 취리히&rarr;그린델발트&rarr;체르마트&rarr;피렌체&rarr;로마
             </p>
           </div>
         </section>
 
         {/* 현재 날씨 — OpenWeatherMap 3일 예보 */}
-        <section className="rounded-2xl px-4 py-3 backdrop-blur-md"
-          style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
-        >
+        <section className="rounded-2xl bg-gradient-to-br from-sky-50/90 via-white/80 to-amber-50/70 px-4 py-3 shadow-sm ring-1 ring-sky-100/60 backdrop-blur-md">
           <h2 className="mb-2 flex items-center gap-1.5 text-sm font-bold text-stone-700">
-            <CloudSun size={16} className="text-amber-500" aria-hidden />
+            <span className="inline-flex h-6 w-6 items-center justify-center rounded-lg bg-amber-100">
+              <CloudSun size={14} className="text-amber-600" aria-hidden />
+            </span>
             현재 날씨
           </h2>
           <WeatherCard />
         </section>
 
-        {/* 다음 미션 카드 */}
+        {/* 다음 미션 카드 — 내부 글로우 레이어 + 강화된 그림자 */}
         <a href="/missions"
-          className="flex items-center gap-3 rounded-2xl px-4 py-4 shadow-md transition-transform active:scale-[0.98]"
+          className="relative flex items-center gap-3 overflow-hidden rounded-2xl px-4 py-4 shadow-lg shadow-orange-500/20 ring-1 ring-white/20 transition-transform active:scale-[0.98]"
           style={{
-            background: 'linear-gradient(135deg, #D97706 0%, #EA580C 100%)',
+            background:
+              'linear-gradient(135deg, #F59E0B 0%, #D97706 45%, #C2410C 100%)',
           }}
         >
-          <span className="text-3xl">🐻</span>
-          <div className="flex-1">
-            <p className="text-xs font-semibold text-amber-100">
+          {/* 내부 하이라이트 오버레이 — 종이 질감 느낌 */}
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                'radial-gradient(circle at 20% 0%, rgba(255,255,255,0.35) 0%, transparent 60%)',
+            }}
+          />
+          <span className="relative text-3xl drop-shadow">🐻</span>
+          <div className="relative flex-1">
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-amber-100/90">
               {completedCount > 0 ? `${completedCount}개 완료` : '다음 미션'} &middot; DAY {missionDay}
             </p>
-            <p className="text-sm font-bold text-white">
+            <p className="text-sm font-bold text-white drop-shadow-sm">
               {missionText} 🐻
             </p>
           </div>
-          <span className="text-xl text-white/60">&rsaquo;</span>
+          <span className="relative text-xl text-white/70">&rsaquo;</span>
         </a>
 
         {/* 방문 도장 모으기 */}
-        <section className="rounded-2xl px-4 py-4 backdrop-blur-md"
-          style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
-        >
+        <section className="rounded-2xl bg-gradient-to-br from-rose-50/80 via-white/85 to-amber-50/70 px-4 py-4 shadow-sm ring-1 ring-rose-100/60 backdrop-blur-md">
           <h2 className="mb-1 flex items-center justify-center gap-1.5 text-center text-sm font-bold text-stone-700">
-            <MapPin size={16} className="text-rose-500" aria-hidden />
+            <span className="inline-flex h-6 w-6 items-center justify-center rounded-lg bg-rose-100">
+              <MapPin size={14} className="text-rose-600" aria-hidden />
+            </span>
             방문 도장 모으기
           </h2>
           <p className="mb-3 text-center text-[10px] text-stone-400">
@@ -185,11 +213,11 @@ export default function HomePage() {
         </section>
 
         {/* 항공편 요약 */}
-        <section className="rounded-2xl px-4 py-4 backdrop-blur-md"
-          style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
-        >
+        <section className="rounded-2xl bg-gradient-to-br from-sky-50/80 via-white/85 to-white/70 px-4 py-4 shadow-sm ring-1 ring-sky-100/60 backdrop-blur-md">
           <h2 className="mb-2 flex items-center gap-1.5 text-sm font-bold text-stone-700">
-            <Plane size={16} className="text-sky-500" aria-hidden />
+            <span className="inline-flex h-6 w-6 items-center justify-center rounded-lg bg-sky-100">
+              <Plane size={14} className="text-sky-600" aria-hidden />
+            </span>
             항공편
           </h2>
           <div className="flex flex-col gap-2">
@@ -214,11 +242,11 @@ export default function HomePage() {
         </section>
 
         {/* 숙소 일정 */}
-        <section className="rounded-2xl px-4 py-4 backdrop-blur-md"
-          style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
-        >
+        <section className="rounded-2xl bg-gradient-to-br from-emerald-50/80 via-white/85 to-amber-50/70 px-4 py-4 shadow-sm ring-1 ring-emerald-100/60 backdrop-blur-md">
           <h2 className="mb-2 flex items-center gap-1.5 text-sm font-bold text-stone-700">
-            <Hotel size={16} className="text-emerald-600" aria-hidden />
+            <span className="inline-flex h-6 w-6 items-center justify-center rounded-lg bg-emerald-100">
+              <Hotel size={14} className="text-emerald-600" aria-hidden />
+            </span>
             숙소 일정
           </h2>
           <div className="flex flex-col gap-1.5">
