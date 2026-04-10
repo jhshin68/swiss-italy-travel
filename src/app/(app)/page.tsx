@@ -2,6 +2,7 @@
 
 import { useAuthStore } from '@/stores/auth-store';
 import { useMissions } from '@/hooks/use-missions';
+import { WeatherCard } from '@/components/features/weather/weather-card';
 // 여행 기본 정보
 const TRIP_START = new Date('2026-10-08T00:00:00');
 const TRIP_END = new Date('2026-10-19T23:59:59');
@@ -128,16 +129,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 현재 날씨 (플레이스홀더) */}
+        {/* 현재 날씨 — OpenWeatherMap 3일 예보 */}
         <section className="rounded-2xl px-4 py-3 backdrop-blur-sm"
           style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
         >
           <h2 className="mb-2 text-sm font-bold text-stone-700">
             <span className="mr-1">☀️</span>현재 날씨
           </h2>
-          <div className="rounded-xl bg-white/60 py-3 text-center text-sm text-stone-400">
-            날씨 정보 없음
-          </div>
+          <WeatherCard />
         </section>
 
         {/* 다음 미션 카드 */}
