@@ -43,8 +43,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# bkit runtime (개인 세션 상태 — 커밋 불필요)
+# bkit 내부 상태 (세션별로 갱신되는 로컬 전용 파일 — 커밋 불필요)
 .bkit/runtime/
+.bkit/state/
+.bkit/snapshots/
 
 # 개인 자료 폴더
 내폴더/
