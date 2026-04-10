@@ -137,8 +137,8 @@ export function WeatherCard() {
 
   return (
     <div className="flex flex-col gap-2">
-      {/* 가로 한 줄: 오늘(크게) + 내일·모레(작게) */}
-      <div className="flex items-stretch gap-2 rounded-xl bg-white/60 p-3">
+      {/* 가로 한 줄: 오늘(크게) | 내일(작게) | 모레(작게) */}
+      <div className="flex items-center gap-2 rounded-xl bg-white/60 p-3">
         {/* 오늘 — 왼쪽 크게 */}
         <div className="flex flex-1 items-center gap-2">
           <span className="text-3xl">{data.current.emoji}</span>
@@ -157,33 +157,22 @@ export function WeatherCard() {
           </div>
         </div>
 
-        {/* 구분선 */}
-        <div className="w-px bg-stone-200" />
-
-        {/* 내일·모레 — 오른쪽 작게 세로 배치 */}
-        {data.daily.length > 1 && (
-          <div className="flex flex-col justify-center gap-1.5">
-            {data.daily.slice(1).map((day, i) => (
-              <div key={day.date} className="flex items-center gap-1.5">
-                <span className="text-base">{day.emoji}</span>
-                <div>
-                  <div className="flex items-baseline gap-0.5">
-                    <span className="text-sm font-bold text-stone-700">{day.tempMax}°</span>
-                    <span className="text-[10px] text-stone-400">/ {day.tempMin}°</span>
-                  </div>
-                  <p className="text-[9px] text-stone-400">
-                    {getDayLabel(day.date, i + 1)} · {day.description}
-                  </p>
-                </div>
-                {day.precipProb > 0 && (
-                  <span className={`text-[9px] ${day.precipProb >= 70 ? 'font-bold text-blue-600' : 'text-blue-400'}`}>
-                    💧{day.precipProb}%
-                  </span>
-                )}
-              </div>
-            ))}
+        {/* 내일·모레 — 오른쪽에 나란히 */}
+        {data.daily.slice(1).map((day, i) => (
+          <div key={day.date} className="flex flex-col items-center border-l border-stone-200 px-2">
+            <span className="text-[10px] text-stone-500">{getDayLabel(day.date, i + 1)}</span>
+            <span className="my-0.5 text-xl">{day.emoji}</span>
+            <div className="flex items-baseline gap-0.5">
+              <span className="text-sm font-bold text-stone-700">{day.tempMax}°</span>
+              <span className="text-[9px] text-stone-400">/{day.tempMin}°</span>
+            </div>
+            {day.precipProb > 0 && (
+              <span className={`text-[9px] ${day.precipProb >= 70 ? 'font-bold text-blue-600' : 'text-blue-400'}`}>
+                💧{day.precipProb}%
+              </span>
+            )}
           </div>
-        )}
+        ))}
       </div>
 
       {/* 날씨 팁 */}
