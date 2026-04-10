@@ -11,13 +11,15 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { href: '/', label: '홈', icon: '🏠' },
-  { href: '/itinerary', label: '일정', icon: '📅' },
-  { href: '/map', label: '지도', icon: '🗺️' },
-  { href: '/expenses', label: '경비', icon: '💰' },
-  { href: '/info', label: '비상', icon: 'ℹ️' },
+  { href: '/itinerary', label: '여정', icon: '📅' },
+  { href: '/expenses', label: '지출', icon: '💰' },
+  { href: '/missions', label: '미션', icon: '🏆' },
+  { href: '/phrases', label: '현지어', icon: '💬' },
+  { href: '/checklist', label: '체크', icon: '✅' },
+  { href: '/info', label: '긴급', icon: '🚨' },
 ];
 
-// 하단 탭 네비게이션 — 5개 메인 섹션으로 이동
+// 하단 탭 네비게이션 — 7개 메인 섹션으로 이동
 export function BottomNav() {
   const pathname = usePathname();
 
@@ -44,8 +46,8 @@ export function BottomNav() {
                     : 'text-[var(--color-text)]/50 hover:text-[var(--color-text)]/80'
                 }`}
               >
-                <span className="text-lg leading-none">{item.icon}</span>
-                <span>{item.label}</span>
+                <span className="text-base leading-none">{item.icon}</span>
+                <span className="truncate">{item.label}</span>
               </Link>
             </li>
           );
