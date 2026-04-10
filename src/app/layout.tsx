@@ -46,6 +46,12 @@ export default function RootLayout({
     >
       <head>
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+        {/* Pretendard 폰트 CDN — globals.css의 @import는 Turbopack에서 순서 충돌이 나므로
+            <head> 직접 로드 방식으로 우회 */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css"
+        />
       </head>
       <body className="min-h-full flex flex-col bg-[var(--color-background)]">
         <div className="mx-auto w-full max-w-[430px] flex-1 flex flex-col">

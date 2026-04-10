@@ -196,23 +196,55 @@ npm run type-check   # tsc --noEmit
 
 ---
 
-## 현재 작업 위치 (2026-03-29 기준)
+## 현재 작업 위치 (2026-04-10 기준)
 
 ```
-Phase 1 — 기반 구축 중
-  ✅ STEP 1: 환경 설정 (Node.js, Git, Claude Code)
-  ✅ STEP 2: CLAUDE.md 작성
-  ✅ STEP 3: 설계 문서 26개 + DEV_GUIDE.md git 커밋
-  ⏳ STEP 4: backend/.env 생성 완료 → FAMILY_PIN 설정 필요
-  □  STEP 5~7: Oracle VM SSH 접속 + DB 마이그레이션
-  □  STEP 8~9: 인증 기능 (PIN 로그인 + 멤버 선택)
-  □  STEP 10~11: 데이터 시딩 (108개 장소)
+Phase 1 — 기반 구축 ✅ 완료
+  ✅ 환경 설정, CLAUDE.md, 설계 문서 26개 + DEV_GUIDE.md
+  ✅ backend/.env + FAMILY_PIN 설정
+  ✅ Oracle VM 배포 + DB 마이그레이션 + 108개 장소 시딩
+  ✅ PIN 로그인 + 멤버 선택 인증
+
+Phase 2 — 핵심 기능 ✅ 구현 완료
+  ✅ 일정(itinerary) — 12일 가로 스크롤 + Day별 장소 목록
+  ✅ 경비(expenses) — 오늘/전체/정산 3탭 + 즉시 반영
+  ✅ 지도(map) — Leaflet + 108개 마커
+  ✅ 비상정보(info) — 연락처·환율·위급 가이드
+  ✅ 날씨(weather) — open-meteo 기반 3일치 (v6 FINAL 가이드)
+  ✅ 오프라인 감지 배너 (useSyncExternalStore)
+  ✅ 체크리스트 · 미션 · 회화집
+
+Phase 3 — 배포·안정화 진행 중
+  ✅ Vercel 프론트엔드 배포 (swiss-italy-travel.vercel.app)
+  ✅ Oracle VM 백엔드 배포 (slp-travel.duckdns.org)
+  ✅ React 19 set-state-in-effect 규칙 대응 — IIFE/마이크로태스크 패턴
+  ✅ 백엔드 type-check 통과
+  ✅ 프론트 lint + type-check + build 통과
+  □  Playwright E2E 테스트 복구
+  □  PWA 아이콘·매니페스트 최종 점검
 ```
+
+### 핵심 패턴 메모 (Phase 3에서 확립)
+
+- **React 19 `react-hooks/set-state-in-effect`**
+  effect 동기 본체에서 setState 금지. 해결책:
+  1. `useEffect(() => { let c=false; void Promise.resolve().then(async () => { ... setState(...) }) }, [...])` — setState 전에 마이크로태스크로 지연
+  2. 외부 이벤트 소스는 `useSyncExternalStore`로 구독 (예: `use-network-status.ts`)
+  3. 렌더 시점 `Date.now()`/`Math.random()` 금지 → `remainingTime` 같은 상태로 분리
+
+- **백엔드 Express 타입 확장**
+  `declare global { namespace Express { ... } }` 금지 (ESLint `no-namespace`).
+  → `declare module 'express-serve-static-core' { interface Request { ... } }` 사용.
+
+- **ESLint 미사용 변수 규칙**
+  `_` 접두사는 무시. `eslint.config.mjs`의
+  `argsIgnorePattern: "^_"`, `varsIgnorePattern: "^_"`, `caughtErrorsIgnorePattern: "^_"`.
 
 ---
 
-> **버전:** v2.0
-> **최종 수정:** 2026-03-29
+> **버전:** v2.1
+> **최종 수정:** 2026-04-10
 > **변경 이력:**
 > - v1.0: 초안 (기본 코딩 규칙 중심)
 > - v2.0: 핵심 정보·서비스 URL·멤버·기술 스택·DEV_GUIDE 통합
+> - v2.1: Phase 2 완료 반영 + Phase 3 안정화 패턴 메모 추가

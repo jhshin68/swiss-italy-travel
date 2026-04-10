@@ -40,14 +40,20 @@ export function BottomNav() {
             <li key={item.href} className="flex-1">
               <Link
                 href={item.href}
-                className={`flex min-h-[48px] flex-col items-center justify-center gap-0.5 text-xs transition-colors ${
+                className={`flex min-h-[52px] flex-col items-center justify-center gap-0.5 pb-1 pt-1.5 text-[11px] transition-colors ${
                   isActive
                     ? 'font-semibold text-[var(--color-primary)]'
                     : 'text-[var(--color-text)]/50 hover:text-[var(--color-text)]/80'
                 }`}
               >
-                <span className="text-base leading-none">{item.icon}</span>
+                <span className="text-xl leading-none">{item.icon}</span>
                 <span className="truncate">{item.label}</span>
+                {/* 활성 탭 dot indicator — invisible로 레이아웃 고정 유지 */}
+                <span
+                  className={`h-1 w-1 rounded-full bg-[var(--color-primary)] ${
+                    isActive ? '' : 'invisible'
+                  }`}
+                />
               </Link>
             </li>
           );

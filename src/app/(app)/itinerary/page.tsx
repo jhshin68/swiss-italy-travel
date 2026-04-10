@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useAuthStore } from '@/stores/auth-store';
 import { getDays, getDayDetail } from '@/lib/api';
 import { SpotCard } from '@/components/features/itinerary/spot-card';
@@ -66,52 +66,46 @@ export default function ItineraryPage() {
   // 선택된 날짜 버튼 ref (자동 스크롤용)
   const activeBtnRef = useRef<HTMLButtonElement>(null);
 
-  // 날짜 목록 로드
+  // 날짜 목록 로드 — setState는 Promise 마이크로태스크에서만 호출해 effect 동기 본체를 지킨다
   useEffect(() => {
     let cancelled = false;
-
-    async function loadDays() {
-      setIsLoadingDays(true);
-      setError(null);
-
+    void Promise.resolve().then(async () => {
+      if (cancelled) return;
       const result = await getDays(tripId);
       if (cancelled) return;
-
       if (result.success && result.data) {
         setDays(result.data);
-        const initialIdx = getInitialDayIndex(result.data);
-        setSelectedIdx(initialIdx);
+        setSelectedIdx(getInitialDayIndex(result.data));
+        setError(null);
       } else {
         setError(result.error ?? '일정을 불러올 수 없습니다.');
       }
       setIsLoadingDays(false);
-    }
-
-    loadDays();
-    return () => {
-      cancelled = true;
-    };
+    });
+    return () => { cancelled = true; };
   }, [tripId]);
 
   // 선택된 날짜의 장소 목록 로드
   const selectedDay = days[selectedIdx];
-
-  const loadSpots = useCallback(async () => {
-    if (!selectedDay) return;
-
-    setIsLoadingSpots(true);
-    const result = await getDayDetail(tripId, selectedDay.date);
-    if (result.success && result.data) {
-      setSpots(result.data.spots);
-    } else {
-      setSpots([]);
-    }
-    setIsLoadingSpots(false);
-  }, [tripId, selectedDay]);
+  const selectedDate = selectedDay?.date;
 
   useEffect(() => {
-    loadSpots();
-  }, [loadSpots]);
+    if (!selectedDate) return;
+    let cancelled = false;
+    void Promise.resolve().then(async () => {
+      if (cancelled) return;
+      setIsLoadingSpots(true);
+      const result = await getDayDetail(tripId, selectedDate);
+      if (cancelled) return;
+      if (result.success && result.data) {
+        setSpots(result.data.spots);
+      } else {
+        setSpots([]);
+      }
+      setIsLoadingSpots(false);
+    });
+    return () => { cancelled = true; };
+  }, [tripId, selectedDate]);
 
   // 선택된 날짜 버튼이 가시 영역에 오도록 자동 스크롤
   useEffect(() => {

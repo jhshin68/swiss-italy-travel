@@ -74,3 +74,9 @@ public/workbox-*.js.map
 # Playwright 테스트 결과 (로컬 전용)
 playwright-report/
 test-results/
+
+# 백엔드 빌드 산출물
+/backend/dist/
+
+# 홈 화면 임시 스크린샷 (로컬 전용)
+home-*.png

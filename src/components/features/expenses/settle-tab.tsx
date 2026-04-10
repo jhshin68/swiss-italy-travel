@@ -15,7 +15,26 @@ export function SettleTab({ tripId, refreshKey }: SettleTabProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const load = useCallback(async () => {
+  // 데이터 페치 — Promise 마이크로태스크 안에서만 setState 호출
+  useEffect(() => {
+    let cancelled = false;
+    void Promise.resolve().then(async () => {
+      if (cancelled) return;
+      const result = await getSettlement(tripId);
+      if (cancelled) return;
+      if (result.success && result.data) {
+        setSettlement(result.data);
+        setError(null);
+      } else {
+        setError(result.error ?? '정산 정보를 불러올 수 없습니다.');
+      }
+      setIsLoading(false);
+    });
+    return () => { cancelled = true; };
+  }, [tripId, refreshKey]);
+
+  // 다시 시도 — effect 밖(click handler)이므로 sync setState OK
+  const retry = useCallback(async () => {
     setIsLoading(true);
     setError(null);
     const result = await getSettlement(tripId);
@@ -26,10 +45,6 @@ export function SettleTab({ tripId, refreshKey }: SettleTabProps) {
     }
     setIsLoading(false);
   }, [tripId]);
-
-  useEffect(() => {
-    load();
-  }, [load, refreshKey]);
 
   if (isLoading) {
     return (
@@ -45,7 +60,7 @@ export function SettleTab({ tripId, refreshKey }: SettleTabProps) {
         <p className="text-center text-sm text-red-600">{error}</p>
         <button
           type="button"
-          onClick={load}
+          onClick={retry}
           className="min-h-[48px] rounded-xl bg-[var(--color-primary)] px-6 text-sm font-medium text-white"
         >
           다시 시도

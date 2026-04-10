@@ -25,15 +25,17 @@ function getDday(now: Date): { dday: number; phase: 'before' | 'during' | 'after
 }
 
 // 도장 데이터 — 주요 방문지 8곳
+// borderColor: 스위스(bern~gornergrat) = teal 계열, 이탈리아(gelato~colosseum) = amber 계열
+// 왜: 국가별 정체성을 색으로 드러내어 도장이 단순 개수가 아닌 "여정의 증거"로 보이게 함
 const STAMPS = [
-  { id: 'bern', name: '베른', emoji: '🐻', color: '#8B6914' },
-  { id: 'grindelwald', name: '그린델발트', emoji: '🏔️', color: '#2E7D32' },
-  { id: 'first', name: '피르스트', emoji: '🚡', color: '#0277BD' },
-  { id: 'zermatt', name: '체르마트', emoji: '⛰️', color: '#5D4037' },
-  { id: 'gornergrat', name: '고르너그라트', emoji: '🏔️', color: '#37474F' },
-  { id: 'gelato', name: '젤라또', emoji: '🍦', color: '#E91E63' },
-  { id: 'firenze', name: '피렌체', emoji: '🎨', color: '#FF6F00' },
-  { id: 'colosseum', name: '콜로세움', emoji: '🏛️', color: '#4E342E' },
+  { id: 'bern',        name: '베른',         emoji: '🐻',  color: '#8B6914', borderColor: '#14B8A6' },
+  { id: 'grindelwald', name: '그린델발트',    emoji: '🏔️', color: '#2E7D32', borderColor: '#2DD4BF' },
+  { id: 'first',       name: '피르스트',      emoji: '🚡',  color: '#0277BD', borderColor: '#5EEAD4' },
+  { id: 'zermatt',     name: '체르마트',      emoji: '⛰️', color: '#5D4037', borderColor: '#2DD4BF' },
+  { id: 'gornergrat',  name: '고르너그라트',  emoji: '🏔️', color: '#37474F', borderColor: '#14B8A6' },
+  { id: 'gelato',      name: '젤라또',        emoji: '🍦',  color: '#E91E63', borderColor: '#F59E0B' },
+  { id: 'firenze',     name: '피렌체',        emoji: '🎨',  color: '#FF6F00', borderColor: '#D97706' },
+  { id: 'colosseum',   name: '콜로세움',      emoji: '🏛️', color: '#4E342E', borderColor: '#B45309' },
 ];
 
 // 미션 데이터 (Day별 메인 미션)
@@ -73,8 +75,16 @@ export default function HomePage() {
           alt="스위스 풍경"
           className="h-full w-full object-cover"
         />
-        {/* 배경 위에 반투명 오버레이 — 가독성 확보 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-white/70" />
+        {/* 배경 위에 반투명 오버레이 — 상단은 풍경을 보여주고 하단은 크림색 배경과 자연스럽게 통합
+            이유: 기존 via-white/30은 전체가 뿌옇게 보여 "배경 이미지 따로, 콘텐츠 따로" 느낌.
+                 상단 25%까지는 완전 투명으로 풍경 노출, 이후 점진적으로 --color-background(#FEF9E7)로 전환. */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to bottom, transparent 0%, transparent 25%, rgba(254, 249, 231, 0.55) 55%, rgba(254, 249, 231, 0.92) 100%)',
+          }}
+        />
       </div>
 
       <div className="relative flex flex-col gap-4 px-4 pb-24 pt-6">
@@ -89,18 +99,14 @@ export default function HomePage() {
           </p>
         </section>
 
-        {/* D-Day 카드 (나무간판 스타일) */}
-        <section className="mx-auto flex w-full max-w-sm overflow-hidden rounded-2xl shadow-lg"
+        {/* D-Day 카드 (나무간판 스타일) — rounded-2xl(16px) + 강화된 shadow */}
+        <section
+          className="mx-auto flex w-full max-w-sm overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5"
           style={{ backgroundColor: 'rgba(255,253,245,0.92)' }}
         >
-          {/* 왼쪽: D-day 나무간판 */}
-          <div className="flex flex-col items-center justify-center px-5 py-4"
-            style={{
-              background: 'linear-gradient(135deg, #8B6914 0%, #A67C28 50%, #8B6914 100%)',
-              borderRight: '3px solid #6B5310',
-            }}
-          >
-            <span className="text-xs font-bold text-amber-100">
+          {/* 왼쪽: D-day 나무간판 — wooden-sign 클래스가 나무결 + 못 장식 담당 (globals.css) */}
+          <div className="wooden-sign flex flex-col items-center justify-center px-5 py-4">
+            <span className="text-xs font-bold text-amber-100 drop-shadow">
               {phase === 'before' ? '출발까지' : phase === 'during' ? '여행중' : '완료!'}
             </span>
             <span className="text-4xl font-black text-white drop-shadow-md">
@@ -130,7 +136,7 @@ export default function HomePage() {
         </section>
 
         {/* 현재 날씨 — OpenWeatherMap 3일 예보 */}
-        <section className="rounded-2xl px-4 py-3 backdrop-blur-sm"
+        <section className="rounded-2xl px-4 py-3 backdrop-blur-md"
           style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
         >
           <h2 className="mb-2 text-sm font-bold text-stone-700">
@@ -159,7 +165,7 @@ export default function HomePage() {
         </a>
 
         {/* 방문 도장 모으기 */}
-        <section className="rounded-2xl px-4 py-4 backdrop-blur-sm"
+        <section className="rounded-2xl px-4 py-4 backdrop-blur-md"
           style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
         >
           <h2 className="mb-1 text-center text-sm font-bold text-stone-700">
@@ -176,7 +182,7 @@ export default function HomePage() {
         </section>
 
         {/* 항공편 요약 */}
-        <section className="rounded-2xl px-4 py-4 backdrop-blur-sm"
+        <section className="rounded-2xl px-4 py-4 backdrop-blur-md"
           style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
         >
           <h2 className="mb-2 text-sm font-bold text-stone-700">
@@ -204,7 +210,7 @@ export default function HomePage() {
         </section>
 
         {/* 숙소 일정 */}
-        <section className="rounded-2xl px-4 py-4 backdrop-blur-sm"
+        <section className="rounded-2xl px-4 py-4 backdrop-blur-md"
           style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
         >
           <h2 className="mb-2 text-sm font-bold text-stone-700">
@@ -226,13 +232,16 @@ export default function HomePage() {
 // ── 서브 컴포넌트 ──────────────────────────────
 
 function StampCard({ stamp, collected }: { stamp: typeof STAMPS[number]; collected: boolean }) {
+  // collected 시 stamp.borderColor 인라인 적용 (Tailwind 동적 클래스 회피)
+  // animate-stamp-bounce는 collected 상태에서만 렌더되어 마운트 1회 재생
   return (
     <div
       className={`flex flex-col items-center gap-1 rounded-xl border-2 px-1 py-3 text-center transition-all ${
         collected
-          ? 'border-amber-400 bg-amber-50 shadow-md'
+          ? 'bg-white/90 shadow-md animate-stamp-bounce'
           : 'border-stone-200 bg-white/60'
       }`}
+      style={collected ? { borderColor: stamp.borderColor } : undefined}
     >
       <span className={`text-2xl ${collected ? '' : 'grayscale opacity-40'}`}>
         {stamp.emoji}

@@ -18,11 +18,9 @@ export interface JwtPayload {
   exp?: number;
 }
 
-/** Express Request에 인증 정보 추가 */
-declare global {
-  namespace Express {
-    interface Request {
-      auth?: JwtPayload;
-    }
+/** Express Request에 인증 정보 추가 — ES2015 module augmentation 방식 */
+declare module 'express-serve-static-core' {
+  interface Request {
+    auth?: JwtPayload;
   }
 }

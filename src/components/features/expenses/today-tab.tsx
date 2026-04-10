@@ -28,7 +28,25 @@ export function TodayTab({ tripId, refreshKey }: TodayTabProps) {
 
   const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
 
-  const load = useCallback(async () => {
+  // 데이터 페치 — setState는 await 이후에만 호출되어 effect 동기 본체 밖에서 실행됨
+  useEffect(() => {
+    let cancelled = false;
+    void (async () => {
+      const result = await getExpenses(tripId, today);
+      if (cancelled) return;
+      if (result.success && result.data) {
+        setExpenses(result.data);
+        setError(null);
+      } else {
+        setError(result.error ?? '경비를 불러올 수 없습니다.');
+      }
+      setIsLoading(false);
+    })();
+    return () => { cancelled = true; };
+  }, [tripId, today, refreshKey]);
+
+  // 다시 시도 — effect 밖(click handler)이므로 sync setState OK
+  const retry = useCallback(async () => {
     setIsLoading(true);
     setError(null);
     const result = await getExpenses(tripId, today);
@@ -39,10 +57,6 @@ export function TodayTab({ tripId, refreshKey }: TodayTabProps) {
     }
     setIsLoading(false);
   }, [tripId, today]);
-
-  useEffect(() => {
-    load();
-  }, [load, refreshKey]);
 
   const handleDelete = async (expenseId: number) => {
     const confirmed = window.confirm('이 경비를 삭제하시겠습니까?');
@@ -72,7 +86,7 @@ export function TodayTab({ tripId, refreshKey }: TodayTabProps) {
         <p className="text-center text-sm text-red-600">{error}</p>
         <button
           type="button"
-          onClick={load}
+          onClick={retry}
           className="min-h-[48px] rounded-xl bg-[var(--color-primary)] px-6 text-sm font-medium text-white"
         >
           다시 시도

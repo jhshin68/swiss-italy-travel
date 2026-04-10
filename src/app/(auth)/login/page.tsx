@@ -14,7 +14,8 @@ export default function LoginPage() {
 
   const [pin, setPin] = useState('');
   const [error, setError] = useState('');
-  const [attempts, setAttempts] = useState(0);
+  // attempts는 setter만 쓰되 getter는 세터 functional form으로 접근 — render 중 사용 안 함
+  const [, setAttempts] = useState(0);
   const [lockedUntil, setLockedUntil] = useState<number | null>(null);
   const [remainingTime, setRemainingTime] = useState(0);
 
@@ -48,7 +49,8 @@ export default function LoginPage() {
     return () => clearInterval(interval);
   }, [lockedUntil]);
 
-  const isLocked = lockedUntil !== null && Date.now() < lockedUntil;
+  // render 중 Date.now() 직접 호출 금지 — remainingTime 타이머 상태로 판정
+  const isLocked = lockedUntil !== null && remainingTime > 0;
 
   // 숫자 키 입력
   const handleKeyPress = useCallback((digit: string) => {
@@ -73,12 +75,17 @@ export default function LoginPage() {
     setError('');
   }, [isLocked]);
 
-  // 멤버 선택 화면에서 돌아왔을 때 (PIN 오류) 처리를 위한 콜백
+  // 멤버 선택 화면에서 돌아왔을 때 (PIN 오류) 처리
   // 이 페이지에서는 PIN만 입력받고, 서버 검증은 select-member에서 수행
   // PIN 오류 시 select-member에서 이 페이지로 리다이렉트하며 에러 상태를 전달
+  // setState는 마이크로태스크로 지연시켜 effect 동기 본체에서 제외한다
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    if (params.get('error') === 'invalid_pin') {
+    if (params.get('error') !== 'invalid_pin') return;
+
+    let cancelled = false;
+    void Promise.resolve().then(() => {
+      if (cancelled) return;
       setError('PIN이 올바르지 않습니다');
       setPin('');
       setAttempts((prev) => {
@@ -93,7 +100,8 @@ export default function LoginPage() {
       });
       // URL에서 쿼리 파라미터 제거
       window.history.replaceState({}, '', '/login');
-    }
+    });
+    return () => { cancelled = true; };
   }, []);
 
   // 잠금 시간 포맷 (분:초)

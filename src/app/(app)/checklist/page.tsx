@@ -153,13 +153,18 @@ export default function ChecklistPage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // localStorage에서 체크 상태 복원
+  // localStorage 복원 — microtask 예약으로 setState를 effect 동기 본체 밖에서 실행
   useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      setCheckedItems(new Set(JSON.parse(saved) as string[]));
-    }
-    setIsLoaded(true);
+    let cancelled = false;
+    void Promise.resolve().then(() => {
+      if (cancelled) return;
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        setCheckedItems(new Set(JSON.parse(saved) as string[]));
+      }
+      setIsLoaded(true);
+    });
+    return () => { cancelled = true; };
   }, []);
 
   // 체크 토글

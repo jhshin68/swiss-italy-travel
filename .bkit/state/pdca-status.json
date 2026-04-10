@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-04-09T22:16:05.474Z",
+  "lastUpdated": "2026-04-10T04:03:05.744Z",
   "activeFeatures": [
     "db",
     "backend",
@@ -20,7 +20,9 @@
     "phrasebook",
     "checklist",
     "tests",
-    "swiss-italy-travel"
+    "swiss-italy-travel",
+    "phrases",
+    "weather"
   ],
   "primaryFeature": "db",
   "features": {
@@ -33,9 +35,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-29T08:49:17.981Z",
-        "lastUpdated": "2026-04-09T02:47:11.594Z"
+        "lastUpdated": "2026-04-10T03:39:15.984Z"
       },
-      "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\backend\\src\\db\\seed.ts"
+      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\backend\\src\\db\\seed.ts"
     },
     "backend": {
       "phase": "do",
@@ -46,9 +48,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-29T08:49:27.066Z",
-        "lastUpdated": "2026-04-09T04:14:42.509Z"
+        "lastUpdated": "2026-04-10T03:39:09.788Z"
       },
-      "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\backend\\src\\lib\\settlement.ts"
+      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\backend\\src\\types\\index.ts"
     },
     "middleware": {
       "phase": "do",
@@ -111,9 +113,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-09T02:40:03.620Z",
-        "lastUpdated": "2026-04-09T02:40:03.620Z"
+        "lastUpdated": "2026-04-10T03:47:11.649Z"
       },
-      "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(auth)\\login\\page.tsx"
+      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\app\\(auth)\\login\\page.tsx"
     },
     "select-member": {
       "phase": "do",
@@ -137,9 +139,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-09T02:56:35.232Z",
-        "lastUpdated": "2026-04-09T13:23:18.647Z"
+        "lastUpdated": "2026-04-10T03:56:42.110Z"
       },
-      "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\src\\components\\layout\\bottom-nav.tsx"
+      "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\components\\layout\\bottom-nav.tsx"
     },
     "(app)": {
       "phase": "do",
@@ -150,9 +152,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-09T02:56:43.267Z",
-        "lastUpdated": "2026-04-09T13:23:03.630Z"
+        "lastUpdated": "2026-04-10T03:56:31.872Z"
       },
-      "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\src\\app\\(app)\\page.tsx"
+      "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\app\\(app)\\page.tsx"
     },
     "itinerary": {
       "phase": "do",
@@ -163,9 +165,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-09T02:57:37.134Z",
-        "lastUpdated": "2026-04-09T22:15:58.680Z"
+        "lastUpdated": "2026-04-10T03:45:50.484Z"
       },
-      "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\src\\components\\features\\itinerary\\spot-card.tsx"
+      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\app\\(app)\\itinerary\\page.tsx"
     },
     "expenses": {
       "phase": "do",
@@ -176,9 +178,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-09T03:04:59.034Z",
-        "lastUpdated": "2026-04-09T06:41:41.112Z"
+        "lastUpdated": "2026-04-10T03:46:37.415Z"
       },
-      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\components\\features\\expenses\\today-tab.tsx"
+      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\components\\features\\expenses\\settle-tab.tsx"
     },
     "info": {
       "phase": "do",
@@ -189,9 +191,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-09T03:23:15.017Z",
-        "lastUpdated": "2026-04-09T03:24:26.962Z"
+        "lastUpdated": "2026-04-10T01:46:10.048Z"
       },
-      "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\travel\\src\\app\\(app)\\info\\page.tsx"
+      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\app\\(app)\\info\\page.tsx"
     },
     "map": {
       "phase": "do",
@@ -215,9 +217,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-09T13:23:25.373Z",
-        "lastUpdated": "2026-04-09T13:23:25.373Z"
+        "lastUpdated": "2026-04-10T01:55:39.632Z"
       },
-      "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\src\\app\\(app)\\missions\\page.tsx"
+      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\app\\(app)\\missions\\page.tsx"
     },
     "phrasebook": {
       "phase": "do",
@@ -241,9 +243,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-09T13:23:37.676Z",
-        "lastUpdated": "2026-04-09T13:23:37.676Z"
+        "lastUpdated": "2026-04-10T03:44:34.604Z"
       },
-      "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\src\\app\\(app)\\checklist\\page.tsx"
+      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\app\\(app)\\checklist\\page.tsx"
     },
     "tests": {
       "phase": "do",
@@ -267,9 +269,35 @@
       "documents": {},
       "timestamps": {
         "started": "2026-04-09T13:31:46.591Z",
-        "lastUpdated": "2026-04-09T21:17:39.143Z"
+        "lastUpdated": "2026-04-10T04:03:05.744Z"
       },
-      "lastFile": "c:\\Users\\jhshi\\Work\\swiss-italy-travel\\playwright.config.ts"
+      "lastFile": "C:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\app\\layout.tsx"
+    },
+    "phrases": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-04-10T01:29:37.372Z",
+        "lastUpdated": "2026-04-10T01:29:37.372Z"
+      },
+      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\app\\(app)\\phrases\\page.tsx"
+    },
+    "weather": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-04-10T02:12:03.245Z",
+        "lastUpdated": "2026-04-10T03:38:34.511Z"
+      },
+      "lastFile": "c:\\Users\\jhshi\\Work\\02_Personal\\swiss-italy-travel\\src\\components\\features\\weather\\weather-card.tsx"
     }
   },
   "pipeline": {
@@ -280,7 +308,7 @@
   "session": {
     "startedAt": "2026-03-29T08:41:25.646Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-04-09T22:16:05.474Z"
+    "lastActivity": "2026-04-10T04:03:05.744Z"
   },
   "history": [
     {
@@ -970,6 +998,306 @@
     {
       "timestamp": "2026-04-09T22:16:05.474Z",
       "feature": "map",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:26:50.638Z",
+      "feature": "layout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:26:57.410Z",
+      "feature": "layout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:28:08.040Z",
+      "feature": "missions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:29:37.372Z",
+      "feature": "phrases",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:31:34.782Z",
+      "feature": "checklist",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:46:10.048Z",
+      "feature": "info",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:54:44.695Z",
+      "feature": "swiss-italy-travel",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:55:39.632Z",
+      "feature": "missions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:55:57.078Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:56:03.130Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:56:14.197Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T01:56:27.447Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:12:03.246Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:14:05.351Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:14:10.759Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:14:18.264Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:45:42.029Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:46:28.998Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:46:44.802Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:47:18.147Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:47:27.393Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:52:56.760Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:56:50.010Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T02:58:51.689Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:38:29.231Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:38:34.511Z",
+      "feature": "weather",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:38:43.038Z",
+      "feature": "login",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:39:03.385Z",
+      "feature": "login",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:39:09.788Z",
+      "feature": "backend",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:39:15.984Z",
+      "feature": "db",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:39:51.736Z",
+      "feature": "swiss-italy-travel",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:40:03.450Z",
+      "feature": "layout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:41:00.909Z",
+      "feature": "layout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:41:42.069Z",
+      "feature": "expenses",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:44:06.992Z",
+      "feature": "expenses",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:44:34.604Z",
+      "feature": "checklist",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:45:39.018Z",
+      "feature": "itinerary",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:45:50.484Z",
+      "feature": "itinerary",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:46:05.233Z",
+      "feature": "expenses",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:46:09.378Z",
+      "feature": "expenses",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:46:33.561Z",
+      "feature": "expenses",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:46:37.415Z",
+      "feature": "expenses",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:47:11.649Z",
+      "feature": "login",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:55:52.128Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:56:01.364Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:56:15.536Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:56:19.653Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:56:31.872Z",
+      "feature": "(app)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T03:56:42.110Z",
+      "feature": "layout",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-10T04:03:05.744Z",
+      "feature": "swiss-italy-travel",
       "phase": "do",
       "action": "updated"
     }

@@ -31,17 +31,6 @@ interface WeatherData {
   updatedAt: string;
 }
 
-// 날씨 코드에 따른 배경색
-function weatherBg(code: number): string {
-  if (code <= 2) return 'bg-gradient-to-r from-sky-400 to-blue-400';
-  if (code <= 3) return 'bg-gradient-to-r from-gray-300 to-gray-400';
-  if (code <= 48) return 'bg-gradient-to-r from-gray-400 to-gray-500';
-  if (code <= 67) return 'bg-gradient-to-r from-blue-400 to-blue-500';
-  if (code <= 77) return 'bg-gradient-to-r from-slate-300 to-slate-400';
-  if (code <= 82) return 'bg-gradient-to-r from-blue-300 to-blue-400';
-  return 'bg-gradient-to-r from-purple-400 to-purple-500';
-}
-
 // 요일 이름 (한국어)
 function getDayLabel(dateStr: string, index: number): string {
   if (index === 0) return '오늘';
@@ -73,15 +62,6 @@ function writeCache(cityKey: string, data: WeatherData) {
   try {
     localStorage.setItem(CACHE_KEY_PREFIX + cityKey, JSON.stringify({ data, ts: Date.now() }));
   } catch { /* 쿼터 초과 등 무시 */ }
-}
-
-// 마지막 갱신 시각 표시
-function timeSince(isoStr: string): string {
-  const diff = Date.now() - new Date(isoStr).getTime();
-  const min = Math.floor(diff / 60000);
-  if (min < 1) return '방금 전';
-  if (min < 60) return `${min}분 전`;
-  return `${Math.floor(min / 60)}시간 전`;
 }
 
 // 날씨 위젯 — open-meteo 기반, 현재 날씨(크게) + 내일·모레(작게)

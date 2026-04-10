@@ -8,7 +8,7 @@ import bcrypt from 'bcryptjs';
 import crypto from 'crypto';
 import { getDb, closeDb } from './connection';
 import ITINERARY from '../../../src/data/itinerary';
-import type { DaySchedule, ScheduleItem } from '../../../src/data/itinerary';
+import type { ScheduleItem } from '../../../src/data/itinerary';
 
 // itinerary.ts의 '10/8' → '2026-10-08' ISO 형식으로 변환
 function toIsoDate(shortDate: string): string {
