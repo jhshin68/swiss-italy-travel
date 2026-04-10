@@ -137,22 +137,53 @@ export function WeatherCard() {
 
   return (
     <div className="flex flex-col gap-2">
-      {/* 섹션1 — 현재 날씨 카드 (컴팩트 가로형) */}
-      <div className={`flex items-center gap-3 rounded-xl px-4 py-3 text-white shadow-sm ${weatherBg(data.current.weatherCode)}`}>
-        <span className="text-4xl">{data.current.emoji}</span>
-        <div className="flex-1">
-          <div className="flex items-baseline gap-1.5">
-            <span className="text-3xl font-bold">{data.current.temp}°</span>
-            <span className="text-sm opacity-90">{data.current.description}</span>
-          </div>
-          <p className="text-xs font-medium opacity-90">
-            {data.flag} {data.city}
-          </p>
-          <div className="mt-0.5 flex gap-3 text-[10px] opacity-80">
-            <span>💧 {data.current.humidity}%</span>
-            <span>💨 {data.current.windSpeed}km/h</span>
+      {/* 가로 한 줄: 오늘(크게) + 내일·모레(작게) */}
+      <div className="flex items-stretch gap-2 rounded-xl bg-white/60 p-3">
+        {/* 오늘 — 왼쪽 크게 */}
+        <div className="flex flex-1 items-center gap-2">
+          <span className="text-3xl">{data.current.emoji}</span>
+          <div>
+            <div className="flex items-baseline gap-1">
+              <span className="text-2xl font-bold text-stone-800">{data.current.temp}°</span>
+              <span className="text-xs text-stone-500">{data.current.description}</span>
+            </div>
+            <p className="text-[10px] text-stone-400">
+              {data.flag} {data.city}
+            </p>
+            <div className="flex gap-2 text-[9px] text-stone-400">
+              <span>💧 {data.current.humidity}%</span>
+              <span>💨 {data.current.windSpeed}km/h</span>
+            </div>
           </div>
         </div>
+
+        {/* 구분선 */}
+        <div className="w-px bg-stone-200" />
+
+        {/* 내일·모레 — 오른쪽 작게 세로 배치 */}
+        {data.daily.length > 1 && (
+          <div className="flex flex-col justify-center gap-1.5">
+            {data.daily.slice(1).map((day, i) => (
+              <div key={day.date} className="flex items-center gap-1.5">
+                <span className="text-base">{day.emoji}</span>
+                <div>
+                  <div className="flex items-baseline gap-0.5">
+                    <span className="text-sm font-bold text-stone-700">{day.tempMax}°</span>
+                    <span className="text-[10px] text-stone-400">/ {day.tempMin}°</span>
+                  </div>
+                  <p className="text-[9px] text-stone-400">
+                    {getDayLabel(day.date, i + 1)} · {day.description}
+                  </p>
+                </div>
+                {day.precipProb > 0 && (
+                  <span className={`text-[9px] ${day.precipProb >= 70 ? 'font-bold text-blue-600' : 'text-blue-400'}`}>
+                    💧{day.precipProb}%
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* 날씨 팁 */}
@@ -165,39 +196,6 @@ export function WeatherCard() {
           {data.tip}
         </div>
       )}
-
-      {/* 섹션2 — 내일·모레 예보 (작게 나란히) */}
-      {data.daily.length > 1 && (
-        <div className="grid grid-cols-2 gap-2">
-          {data.daily.slice(1).map((day, i) => (
-            <div
-              key={day.date}
-              className="flex items-center gap-2 rounded-xl bg-white/60 px-3 py-2"
-            >
-              <span className="text-xl">{day.emoji}</span>
-              <div className="flex-1">
-                <div className="flex items-baseline gap-1">
-                  <span className="text-base font-bold text-stone-700">{day.tempMax}°</span>
-                  <span className="text-[10px] text-stone-400">/ {day.tempMin}°</span>
-                </div>
-                <p className="text-[10px] text-stone-500">
-                  {getDayLabel(day.date, i + 1)} &middot; {day.description}
-                </p>
-                {day.precipProb > 0 && (
-                  <span className={`text-[9px] ${day.precipProb >= 70 ? 'font-bold text-blue-600' : 'text-blue-400'}`}>
-                    💧{day.precipProb}%
-                  </span>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* 마지막 갱신 시각 */}
-      <p className="text-right text-[9px] text-stone-400">
-        마지막 갱신: {timeSince(data.updatedAt)}
-      </p>
     </div>
   );
 }
