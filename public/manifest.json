@@ -3,6 +3,7 @@
   "short_name": "가족여행",
   "description": "가족 4인 여행 올인원 앱 — 일정·경비·지도·비상정보",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#FEF9E7",
   "theme_color": "#C8552A",
@@ -11,19 +12,26 @@
     {
       "src": "/icons/icon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
       "src": "/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

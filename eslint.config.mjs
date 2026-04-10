@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // 백엔드 빌드 산출물 — TypeScript 컴파일 결과물이라 lint 불필요
+    "backend/dist/**",
   ]),
   // 언더스코어 접두사 파라미터/변수는 미사용 경고에서 제외 — Express 미들웨어 관례
   {
