@@ -146,26 +146,6 @@ function TravelTips() {
           </ul>
         </div>
 
-        {/* 기본 회화 */}
-        <div className="rounded-xl border border-[var(--color-text)]/5 bg-[var(--color-surface)] p-4 shadow-sm">
-          <p className="text-sm font-semibold text-[var(--color-text)]">🗣️ 기본 회화</p>
-          <div className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs text-[var(--color-text)]/70">
-            <div>
-              <p className="font-medium text-[var(--color-text)]/90">🇩🇪 독일어 (스위스)</p>
-              <p className="mt-1">안녕하세요: <strong>Grüezi</strong></p>
-              <p>감사합니다: <strong>Danke</strong></p>
-              <p>실례합니다: <strong>Entschuldigung</strong></p>
-              <p>계산서 주세요: <strong>Die Rechnung, bitte</strong></p>
-            </div>
-            <div>
-              <p className="font-medium text-[var(--color-text)]/90">🇮🇹 이탈리아어</p>
-              <p className="mt-1">안녕하세요: <strong>Buongiorno</strong></p>
-              <p>감사합니다: <strong>Grazie</strong></p>
-              <p>실례합니다: <strong>Scusi</strong></p>
-              <p>계산서 주세요: <strong>Il conto, per favore</strong></p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
