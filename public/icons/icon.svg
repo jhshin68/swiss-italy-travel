@@ -1,13 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- 테라코타 배경 원 -->
-  <circle cx="256" cy="256" r="256" fill="#C8552A"/>
-  <!-- 흰색 비행기 아이콘 -->
-  <g transform="translate(256,256) rotate(-45)">
-    <path d="M-20,-120 L20,-120 L20,0 L80,60 L80,80 L20,40 L20,100 L40,115 L40,130 L0,118 L-40,130 L-40,115 L-20,100 L-20,40 L-80,80 L-80,60 L-20,0 Z" fill="white"/>
-  </g>
-  <!-- 스위스 십자 장식 (우하단) -->
-  <g transform="translate(380,380)">
-    <rect x="-18" y="-6" width="36" height="12" rx="2" fill="rgba(255,255,255,0.6)"/>
-    <rect x="-6" y="-18" width="12" height="36" rx="2" fill="rgba(255,255,255,0.6)"/>
+  <!-- 2026 스위스·이탈리아 가족여행 앱 아이콘 — 마테호른 실루엣 컨셉
+       작은 사이즈(48px)에서도 산 실루엣이 명확히 보이도록 단순화 -->
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="256" cy="256" r="256"/>
+    </clipPath>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E89359"/>
+      <stop offset="55%" stop-color="#D3662F"/>
+      <stop offset="100%" stop-color="#B8471F"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#circleClip)">
+    <!-- 따뜻한 석양 하늘 그라디언트 -->
+    <rect width="512" height="512" fill="url(#skyGrad)"/>
+
+    <!-- 태양 — 크림톤 -->
+    <circle cx="150" cy="180" r="36" fill="#FEF9E7" opacity="0.95"/>
+
+    <!-- 뒤쪽 알프스 능선 (반투명 흰색) -->
+    <path d="M -10,430 L 80,290 L 150,350 L 220,270 L 290,340 L 360,255 L 430,320 L 522,430 L 522,522 L -10,522 Z"
+          fill="#FEF9E7" opacity="0.3"/>
+
+    <!-- 마테호른 주봉 실루엣 — 비대칭 피라미드 + 특유의 휜 정상 -->
+    <path d="M 55,445 L 225,170 L 258,115 L 278,148 L 308,120 L 328,190 L 460,445 Z"
+          fill="#FEF9E7"/>
+
+    <!-- 설선 음영 — 정상부 입체감 -->
+    <path d="M 258,115 L 278,148 L 265,175 L 245,140 Z"
+          fill="#C8552A" opacity="0.22"/>
+    <path d="M 308,120 L 328,190 L 310,200 L 298,155 Z"
+          fill="#C8552A" opacity="0.15"/>
+
+    <!-- 발치 그림자 — 바닥 안착감 -->
+    <rect x="0" y="438" width="512" height="90" fill="#8A3415" opacity="0.35"/>
   </g>
 </svg>
