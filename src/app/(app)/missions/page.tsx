@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useMissions } from '@/hooks/use-missions';
 
 // 여행 기간 기준 D-Day 계산
 const TRIP_START = new Date('2026-10-08T00:00:00');
@@ -43,12 +44,11 @@ const MISSIONS: Mission[] = [
 export default function MissionsPage() {
   const currentDay = getCurrentDayNumber();
   const [selectedDay, setSelectedDay] = useState<number | null>(null);
+  const { completedMissions, completedCount, toggleMission } = useMissions();
 
   const filteredMissions = selectedDay
     ? MISSIONS.filter((m) => m.day === selectedDay)
     : MISSIONS;
-
-  const completedCount = 0; // 향후 서버/로컬 상태와 연동
 
   return (
     <div className="mx-auto max-w-[430px] px-4 pb-24 pt-6">
@@ -100,7 +100,8 @@ export default function MissionsPage() {
             key={mission.id}
             mission={mission}
             isCurrent={mission.day === currentDay}
-            isPast={mission.day < currentDay}
+            isCompleted={completedMissions.has(mission.id)}
+            onToggle={() => toggleMission(mission.id)}
           />
         ))}
       </div>
@@ -140,11 +141,13 @@ function DayFilterButton({
 function MissionCard({
   mission,
   isCurrent,
-  isPast,
+  isCompleted,
+  onToggle,
 }: {
   mission: Mission;
   isCurrent: boolean;
-  isPast: boolean;
+  isCompleted: boolean;
+  onToggle: () => void;
 }) {
   const countryColor = mission.country === 'swiss'
     ? 'border-l-emerald-500'
@@ -155,26 +158,45 @@ function MissionCard({
   return (
     <div
       className={`rounded-xl border-l-4 bg-white p-4 shadow-sm transition-all ${countryColor} ${
-        isCurrent ? 'ring-2 ring-amber-400 ring-offset-1' : ''
-      } ${isPast ? 'opacity-60' : ''}`}
+        isCurrent && !isCompleted ? 'ring-2 ring-amber-400 ring-offset-1' : ''
+      } ${isCompleted ? 'bg-green-50' : ''}`}
     >
       <div className="flex items-start gap-3">
-        <span className="text-3xl">{mission.emoji}</span>
+        <span className={`text-3xl ${isCompleted ? '' : 'grayscale-[30%]'}`}>{mission.emoji}</span>
         <div className="flex-1">
           <div className="flex items-center gap-2">
             <span className="rounded-md bg-stone-100 px-2 py-0.5 text-[10px] font-semibold text-stone-500">
               DAY {mission.day}
             </span>
             <span className="text-[10px] text-stone-400">{mission.city}</span>
-            {isCurrent && (
+            {isCompleted && (
+              <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-bold text-green-700">
+                완료!
+              </span>
+            )}
+            {isCurrent && !isCompleted && (
               <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700">
                 오늘!
               </span>
             )}
           </div>
-          <h3 className="mt-1 text-sm font-bold text-stone-800">{mission.title}</h3>
+          <h3 className={`mt-1 text-sm font-bold ${isCompleted ? 'text-green-800 line-through decoration-green-400' : 'text-stone-800'}`}>
+            {mission.title}
+          </h3>
           <p className="mt-0.5 text-xs text-stone-500">{mission.description}</p>
         </div>
+        {/* 완료 토글 버튼 */}
+        <button
+          onClick={onToggle}
+          className={`mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border-2 text-sm transition-all active:scale-90 ${
+            isCompleted
+              ? 'border-green-500 bg-green-500 text-white'
+              : 'border-stone-300 bg-white text-stone-300 hover:border-amber-400 hover:text-amber-400'
+          }`}
+          aria-label={isCompleted ? '미션 완료 취소' : '미션 완료'}
+        >
+          ✓
+        </button>
       </div>
     </div>
   );

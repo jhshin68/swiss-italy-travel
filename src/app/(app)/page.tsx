@@ -1,6 +1,7 @@
 'use client';
 
 import { useAuthStore } from '@/stores/auth-store';
+import { useMissions } from '@/hooks/use-missions';
 // 여행 기본 정보
 const TRIP_START = new Date('2026-10-08T00:00:00');
 const TRIP_END = new Date('2026-10-19T23:59:59');
@@ -53,6 +54,7 @@ const MISSIONS: Record<number, string> = {
 export default function HomePage() {
   const { member } = useAuthStore();
   const { dday, phase, dayNumber } = getDday(new Date());
+  const { collectedStamps, completedCount } = useMissions();
 
   if (!member) return null;
 
@@ -139,8 +141,8 @@ export default function HomePage() {
         </section>
 
         {/* 다음 미션 카드 */}
-        <section
-          className="flex items-center gap-3 rounded-2xl px-4 py-4 shadow-md"
+        <a href="/missions"
+          className="flex items-center gap-3 rounded-2xl px-4 py-4 shadow-md transition-transform active:scale-[0.98]"
           style={{
             background: 'linear-gradient(135deg, #D97706 0%, #EA580C 100%)',
           }}
@@ -148,25 +150,28 @@ export default function HomePage() {
           <span className="text-3xl">🐻</span>
           <div className="flex-1">
             <p className="text-xs font-semibold text-amber-100">
-              다음 미션 &middot; DAY {missionDay}
+              {completedCount > 0 ? `${completedCount}개 완료` : '다음 미션'} &middot; DAY {missionDay}
             </p>
             <p className="text-sm font-bold text-white">
               {missionText} 🐻
             </p>
           </div>
           <span className="text-xl text-white/60">&rsaquo;</span>
-        </section>
+        </a>
 
         {/* 방문 도장 모으기 */}
         <section className="rounded-2xl px-4 py-4 backdrop-blur-sm"
           style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
         >
-          <h2 className="mb-3 text-center text-sm font-bold text-stone-700">
+          <h2 className="mb-1 text-center text-sm font-bold text-stone-700">
             <span className="mr-1">📍</span>방문 도장 모으기
           </h2>
+          <p className="mb-3 text-center text-[10px] text-stone-400">
+            미션 완료 시 도장이 자동 획득됩니다 ({collectedStamps.size}/{STAMPS.length})
+          </p>
           <div className="grid grid-cols-4 gap-2">
             {STAMPS.map((stamp) => (
-              <StampCard key={stamp.id} stamp={stamp} collected={false} />
+              <StampCard key={stamp.id} stamp={stamp} collected={collectedStamps.has(stamp.id)} />
             ))}
           </div>
         </section>
